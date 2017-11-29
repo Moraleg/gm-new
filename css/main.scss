@@ -1,42 +1,270 @@
-* {
-   -webkit-box-sizing:border-box;
-   -moz-box-sizing:border-box;
-   box-sizing:border-box;
+@font-face {
+   font-family: 'CircularStd-Bold';
+   // src: url('../fonts/Apercu-Regular.eot');
+   src: url('../fonts/CircularStd-Bold.otf');
+   // src: url('../fonts/Apercu-Regular.woff') format('woff'),
+   // url('../fonts/Apercu-Regular.ttf') format('truetype'),
+   // url('../fonts/Apercu-Regular.svg') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'CircularStd-Medium';
+   // src: url('../fonts/Apercu-Regular.eot');
+   src: url('../fonts/CircularStd-Medium.otf');
+   // src: url('../fonts/Apercu-Regular.woff') format('woff'),
+   // url('../fonts/Apercu-Regular.ttf') format('truetype'),
+   // url('../fonts/Apercu-Regular.svg') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'DINCondensed-Bold';
+   src: url('../fonts/INCondensedBold.eot');
+   src: url('../fonts/DINCondensedBold.otf');
+   src: url('../fonts/INCondensedBold.woff') format('woff'),
+   url('../fonts/INCondensedBold.ttf') format('truetype'),
+   url('../fonts/INCondensedBold.svg') format('svg');
+   font-weight: normal;
+   font-style: normal;
 }
 
-//----- Extends
-%clearfix:after {
-   display:block;
-   clear:both;
-   content:'';
+//--- Varialbles
+
+/* Screen Sizes */
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1440px;
+
+/* Fonts */
+$font-stackCB: 'CircularStd-Bold', 'Helvetica', sans-serif;
+$font-stackCM: 'CircularStd-Medium', 'Helvetica', sans-serif;
+$font-stackDB:'DinCondensed-Bold', 'Helvetica', sans-serif;
+
+/* Colors */
+$bg-gradient: linear-gradient(-225deg, rgba(166,189,242,0.15) 0%, rgba(157,169,232,0.15) 42%, rgba(211,187,216,0.15) 76%, rgba(249,192,176,0.15) 100%) no-repeat fixed;
+$blk: #292B2F;
+$purple: #9F96DF;
+$white: #FFF;
+
+
+
+//*****************************
+//      BASE ELEMENTS
+//*****************************
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-//----- Grid System
-$grid-spacing:3%;
+body {
+   background: $bg-gradient;
+   width: 100%;
+   max-width: 1440px;
+   margin: 0;
+   padding: 0;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
 
-.row {
-   @extend %clearfix;
+header, nav {
+   width: 100%;
+   margin: 0 auto;
+   display: block;
+}
 
-   & + & {
-      margin-top:$grid-spacing;
+p {
+   margin: 0 auto;
+   text-align: center;
+}
+
+//
+// [class*='col-'] {
+//   float: left;
+// }
+
+
+
+//*****************************
+//      BASE STYLES
+//*****************************
+
+// .grid {
+//    margin: 0 auto;
+//    display: block;
+//    width: 100%;
+//    &:after {
+//       content: "";
+//       display: table;
+//       clear: both;
+//    }
+// }
+
+nav {
+   margin: 0 auto 42px;
+   text-align: center;
+
+   a {
+      width: 100%;
+      max-width: 225px;
+      padding-right: 38px;
+      text-decoration: none;
+      font-family: $font-stackCB;
+      font-size: 14px;
+      letter-spacing: 0.35px;
+      line-height: 18px;
+      color: #292B2F;
+   }
+
+   a:last-of-type {
+      padding-right: 0;
    }
 }
 
-[class^="col-"] {
-   float: left;
+.full-width {
+   width: 100%;
+}
+
+.name-container {
+   text-transform: uppercase;
+   font-family: $font-stackDB;
+   position: relative;
+   z-index: 100;
+}
+
+.intro-container {
+   text-transform: uppercase;
+   font-family: $font-stackCB;
+   position: relative;
+   z-index: 100;
+}
+
+
+.projects {
+   z-index: 100;
+   display: block;
+   margin-top: 34px;
+}
+
+.projects a {
+   display: block;
+   height: 7px;
+   width: 20px;
+   cursor: pointer;
+   // margin: 0 3px;
+   position: relative;
+}
+.projects a:after {
+   height: 2px;
+   width: 12px;
+   position: absolute;
+   display: block;
+   content: "";
+   background-color: #C4C2C7;
+}
+
+.projects a.active:after  {
+   background-color: #9F96DF;
+   width: 20px;
+   -moz-transition: width 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+   -o-transition: width 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+   -webkit-transition: width 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+   transition: width 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+
+
+
+
+/****************************
+   MEDIA QUERIES
+****************************/
+
+
+/************ Mobile *************/
+@media screen and (min-width: $mobile) {
+
+   .logo {
+      z-index: 0;
+      margin: 22px auto 16px;
+      display: block;
+   }
+
+   .wrapper {
+      width: calc(100% - 20px);
+      margin: 0 auto;
+      background-color: rgba(145, 255, 160, 0.2);
+   }
+
+   .profile-img-container {
+      position: absolute;
+      right: 0;
+      left: 21%;
+
+      .m-profile-img {
+         width: 100%;
+         position: absolute;
+         right: 0;
+         left: 0;
+      }
+
+      p {
+         top: 220px;
+         left: 50px;
+         position: absolute;
+         text-align: left;
+         font-size: 12px;
+         letter-spacing: 0.15px;
+         line-height: 20px;
+         font-family: $font-stackCM;
+         color: #FFF;
+      }
+   }
+
+   .name-container {
+      padding-top: 48px;
+      padding-left: 5px;
+
+      .name {
+         font-size: 30px;
+         color: #292B2F;
+         letter-spacing: 1.5px;
+         line-height: 30px;
+         margin: 0;
+
+         span {
+            padding-left: 16px;
+         }
+      }
+   }
+
+   .intro-container p {
+      font-size: 10px;
+      line-height: 20px;
+      letter-spacing: 1px;
+      text-align: left;
+      margin-top: 23px;
+   }
+
+   .intro-container p, .projects {
+      margin-left: 20px;
+   }
+
 
 }
 
-//----- Columns
-.col-1   { width:(100% / 12) - ($grid-spacing * 11 / 12); }
-.col-2   { width:(100% / 6) - ($grid-spacing * 10 / 12); }
-.col-3   { width:(100% / 4) - ($grid-spacing * 9 / 12); }
-.col-4   { width:(100% / 3) - ($grid-spacing * 8 / 12); }
-.col-5   { width:(100% / 2.4) - ($grid-spacing * 7 / 12); }
-.col-6   { width:(100% / 2) - ($grid-spacing * 6 / 12); }
-.col-7   { width:(100% / 1.714285714285714) - ($grid-spacing * 5 / 12); }
-.col-8   { width:(100% / 1.5) - ($grid-spacing * 4 / 12); }
-.col-9   { width:(100% / 1.333333333333333) - ($grid-spacing * 3 / 12); }
-.col-10  { width:(100% / 1.2) - ($grid-spacing * 2 / 12); }
-.col-11  { width:(100% / 1.090909090909091) - ($grid-spacing * 1 / 12); }
-.col-12  { width:100%; }
+/************ TABLET *************/
+@media screen and (min-width: $tablet) {
+
+
+}
+
+/************ DESKTOP *************/
+@media screen and (min-width: $desktop) {
+
+
+}

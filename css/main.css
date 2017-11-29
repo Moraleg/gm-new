@@ -1,53 +1,163 @@
-* {
+@font-face {
+  font-family: 'CircularStd-Bold';
+  src: url("../fonts/CircularStd-Bold.otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'CircularStd-Medium';
+  src: url("../fonts/CircularStd-Medium.otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'DINCondensed-Bold';
+  src: url("../fonts/INCondensedBold.eot");
+  src: url("../fonts/DINCondensedBold.otf");
+  src: url("../fonts/INCondensedBold.woff") format("woff"), url("../fonts/INCondensedBold.ttf") format("truetype"), url("../fonts/INCondensedBold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* Screen Sizes */
+/* Fonts */
+/* Colors */
+*, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.row:after {
-  display: block;
-  clear: both;
-  content: ''; }
+body {
+  background: linear-gradient(-225deg, rgba(166, 189, 242, 0.15) 0%, rgba(157, 169, 232, 0.15) 42%, rgba(211, 187, 216, 0.15) 76%, rgba(249, 192, 176, 0.15) 100%) no-repeat fixed;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
-.row + .row {
-  margin-top: 3%; }
+header, nav {
+  width: 100%;
+  margin: 0 auto;
+  display: block; }
 
-[class^="col-"] {
-  float: left; }
+p {
+  margin: 0 auto;
+  text-align: center; }
 
-.col-1 {
-  width: 5.58333%; }
+nav {
+  margin: 0 auto 42px;
+  text-align: center; }
+  nav a {
+    width: 100%;
+    max-width: 225px;
+    padding-right: 38px;
+    text-decoration: none;
+    font-family: "CircularStd-Bold", "Helvetica", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.35px;
+    line-height: 18px;
+    color: #292B2F; }
+  nav a:last-of-type {
+    padding-right: 0; }
 
-.col-2 {
-  width: 14.16667%; }
-
-.col-3 {
-  width: 22.75%; }
-
-.col-4 {
-  width: 31.33333%; }
-
-.col-5 {
-  width: 39.91667%; }
-
-.col-6 {
-  width: 48.5%; }
-
-.col-7 {
-  width: 57.08333%; }
-
-.col-8 {
-  width: 65.66667%; }
-
-.col-9 {
-  width: 74.25%; }
-
-.col-10 {
-  width: 82.83333%; }
-
-.col-11 {
-  width: 91.41667%; }
-
-.col-12 {
+.full-width {
   width: 100%; }
+
+.name-container {
+  text-transform: uppercase;
+  font-family: "DinCondensed-Bold", "Helvetica", sans-serif;
+  position: relative;
+  z-index: 100; }
+
+.intro-container {
+  text-transform: uppercase;
+  font-family: "CircularStd-Bold", "Helvetica", sans-serif;
+  position: relative;
+  z-index: 100; }
+
+.projects {
+  z-index: 100;
+  display: block;
+  margin-top: 34px; }
+
+.projects a {
+  display: block;
+  height: 7px;
+  width: 20px;
+  cursor: pointer;
+  position: relative; }
+
+.projects a:after {
+  height: 2px;
+  width: 12px;
+  position: absolute;
+  display: block;
+  content: "";
+  background-color: #C4C2C7; }
+
+.projects a.active:after {
+  background-color: #9F96DF;
+  width: 20px;
+  -moz-transition: width 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  -o-transition: width 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition: width 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: width 600ms cubic-bezier(0.075, 0.82, 0.165, 1); }
+
+/****************************
+   MEDIA QUERIES
+****************************/
+/************ Mobile *************/
+@media screen and (min-width: 320px) {
+  .logo {
+    z-index: 0;
+    margin: 22px auto 16px;
+    display: block; }
+
+  .wrapper {
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    background-color: rgba(145, 255, 160, 0.2); }
+
+  .profile-img-container {
+    position: absolute;
+    right: 0;
+    left: 21%; }
+    .profile-img-container .m-profile-img {
+      width: 100%;
+      position: absolute;
+      right: 0;
+      left: 0; }
+    .profile-img-container p {
+      top: 220px;
+      left: 50px;
+      position: absolute;
+      text-align: left;
+      font-size: 12px;
+      letter-spacing: 0.15px;
+      line-height: 20px;
+      font-family: "CircularStd-Medium", "Helvetica", sans-serif;
+      color: #FFF; }
+
+  .name-container {
+    padding-top: 48px;
+    padding-left: 5px; }
+    .name-container .name {
+      font-size: 30px;
+      color: #292B2F;
+      letter-spacing: 1.5px;
+      line-height: 30px;
+      margin: 0; }
+      .name-container .name span {
+        padding-left: 16px; }
+
+  .intro-container p {
+    font-size: 10px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-align: left;
+    margin-top: 23px; }
+
+  .intro-container p, .projects {
+    margin-left: 20px; } }
+/************ TABLET *************/
+/************ DESKTOP *************/
 
 /*# sourceMappingURL=main.css.map */
