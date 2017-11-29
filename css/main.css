@@ -74,9 +74,11 @@ nav {
   z-index: 100; }
 
 .projects {
+  width: 80%;
   z-index: 100;
   display: block;
-  margin-top: 34px; }
+  margin-top: 34px;
+  margin-bottom: 0; }
 
 .projects a {
   display: block;
@@ -101,6 +103,27 @@ nav {
   -webkit-transition: width 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: width 600ms cubic-bezier(0.075, 0.82, 0.165, 1); }
 
+.vertical-text {
+  width: 15%;
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  border-bottom: 5px solid #EDD5D5;
+  float: right;
+  margin-right: 16px;
+  margin-top: 388px;
+  display: inline-block;
+  z-index: 10000; }
+
+.scroll {
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  color: #292B2F;
+  font-family: "CircularStd-Medium", "Helvetica", sans-serif; }
+  .scroll span {
+    color: #FFF; }
+
 /****************************
    MEDIA QUERIES
 ****************************/
@@ -113,8 +136,7 @@ nav {
 
   .wrapper {
     width: calc(100% - 20px);
-    margin: 0 auto;
-    background-color: rgba(145, 255, 160, 0.2); }
+    margin: 0 auto; }
 
   .profile-img-container {
     position: absolute;
@@ -127,7 +149,8 @@ nav {
       left: 0; }
     .profile-img-container p {
       top: 220px;
-      left: 50px;
+      left: 20%;
+      right: 16%;
       position: absolute;
       text-align: left;
       font-size: 12px;
@@ -149,6 +172,8 @@ nav {
         padding-left: 16px; }
 
   .intro-container p {
+    width: 100%;
+    max-width: 165px;
     font-size: 10px;
     line-height: 20px;
     letter-spacing: 1px;
@@ -156,7 +181,20 @@ nav {
     margin-top: 23px; }
 
   .intro-container p, .projects {
-    margin-left: 20px; } }
+    margin-left: 20px; }
+
+  .btn-container {
+    margin: 114px 0 0 5px;
+    position: relative;
+    z-index: 10000; }
+    .btn-container a {
+      text-decoration: none;
+      padding: 18px 64px;
+      font-size: 16px;
+      font-family: "CircularStd-Medium", "Helvetica", sans-serif;
+      letter-spacing: 0.4px;
+      color: #FFF;
+      background: linear-gradient(-134deg, #A59FD9 0%, #E8CBCA 100%); } }
 /************ TABLET *************/
 /************ DESKTOP *************/
 

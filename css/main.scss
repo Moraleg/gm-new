@@ -116,7 +116,7 @@ nav {
       font-size: 14px;
       letter-spacing: 0.35px;
       line-height: 18px;
-      color: #292B2F;
+      color: $blk
    }
 
    a:last-of-type {
@@ -144,9 +144,11 @@ nav {
 
 
 .projects {
+   width: 80%;
    z-index: 100;
    display: block;
    margin-top: 34px;
+   margin-bottom: 0;
 }
 
 .projects a {
@@ -167,13 +169,42 @@ nav {
 }
 
 .projects a.active:after  {
-   background-color: #9F96DF;
+   background-color: $purple;
    width: 20px;
    -moz-transition: width 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
    -o-transition: width 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
    -webkit-transition: width 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
    transition: width 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
+
+   .vertical-text {
+      width: 15%;
+      -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      transform: rotate(270deg);
+      // -webkit-transform-origin: left top 0;
+      // -ms-transform-origin: left top 0;
+      // transform-origin: left top 0;
+      border-bottom: 5px solid #EDD5D5;
+      // margin: 0px 0px 0px 75px;
+      float: right;
+      margin-right: 16px;
+      margin-top: 388px;
+      display: inline-block;
+      z-index: 10000;
+   }
+
+   .scroll {
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      line-height: 20px;
+      color: $blk;
+      font-family: $font-stackCM;
+      span {
+         color:$white;
+      }
+   }
 
 
 
@@ -197,7 +228,7 @@ nav {
    .wrapper {
       width: calc(100% - 20px);
       margin: 0 auto;
-      background-color: rgba(145, 255, 160, 0.2);
+      // background-color: rgba(145, 255, 160, 0.2);
    }
 
    .profile-img-container {
@@ -214,14 +245,15 @@ nav {
 
       p {
          top: 220px;
-         left: 50px;
+         left: 20%;
+         right: 16%;
          position: absolute;
          text-align: left;
          font-size: 12px;
          letter-spacing: 0.15px;
          line-height: 20px;
          font-family: $font-stackCM;
-         color: #FFF;
+         color: $white;
       }
    }
 
@@ -243,6 +275,8 @@ nav {
    }
 
    .intro-container p {
+      width: 100%;
+      max-width: 165px;
       font-size: 10px;
       line-height: 20px;
       letter-spacing: 1px;
@@ -252,6 +286,22 @@ nav {
 
    .intro-container p, .projects {
       margin-left: 20px;
+   }
+
+   .btn-container {
+      margin: 114px 0 0 5px;
+      position: relative;
+      z-index:10000;
+
+      a {
+         text-decoration: none;
+         padding: 18px 64px;
+         font-size: 16px;
+         font-family: $font-stackCM;
+         letter-spacing: 0.4px;
+         color: $white;
+         background: linear-gradient(-134deg, #A59FD9 0%, #E8CBCA  100%);
+      }
    }
 
 
