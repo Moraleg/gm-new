@@ -61,6 +61,14 @@ nav {
 .full-width {
   width: 100%; }
 
+.wrapper {
+  width: calc(100% - 20px);
+  margin: 0 auto; }
+
+.container {
+  position: absolute;
+  top: 0; }
+
 .name-container {
   text-transform: uppercase;
   font-family: "DinCondensed-Bold", "Helvetica", sans-serif;
@@ -112,9 +120,6 @@ nav {
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
-  position: absolute;
-  right: 16px;
-  top: 435px;
   display: block;
   z-index: 10000;
   border-bottom: 5px solid #EDD5D5;
@@ -136,34 +141,41 @@ nav {
     margin: 22px auto 16px;
     display: block; }
 
-  .wrapper {
-    width: calc(100% - 20px);
-    margin: 0 auto; }
-
   .profile-img-container {
-    position: absolute;
+    width: 100%;
+    position: relative;
     right: 0;
-    left: 21%; }
+    z-index: 400px;
+    max-height: 450px; }
     .profile-img-container .m-profile-img {
       width: 100%;
+      z-index: 1;
+      padding-left: 21%;
+      min-height: 450px; }
+    .profile-img-container .copy {
       position: absolute;
-      right: 0;
-      left: 0;
-      height: 450px; }
-    .profile-img-container p {
+      z-index: 1000;
       top: 220px;
-      left: 20%;
-      right: 16%;
-      position: absolute;
-      text-align: left;
-      font-size: 12px;
-      letter-spacing: 0.15px;
-      line-height: 20px;
-      font-family: "CircularStd-Medium", "Helvetica", sans-serif;
-      color: #FFF; }
+      left: 30.2%; }
+      .profile-img-container .copy p {
+        text-align: left;
+        font-size: 12px;
+        letter-spacing: 0.15px;
+        line-height: 20px;
+        font-family: "CircularStd-Medium", "Helvetica", sans-serif;
+        color: #FFF; }
+
+  .text-container {
+    width: 10%;
+    position: relative;
+    margin: 0px -11% -10% 78%;
+    margin-top: -18px;
+    left: 20px;
+    right: 16px;
+    z-index: 700; }
 
   .name-container {
-    padding-top: 48px;
+    padding-top: 55px;
     padding-left: 5px; }
     .name-container .name {
       font-size: 30px;

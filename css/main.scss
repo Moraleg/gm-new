@@ -128,6 +128,16 @@ nav {
    width: 100%;
 }
 
+.wrapper {
+   width: calc(100% - 20px);
+   margin: 0 auto;
+}
+
+.container {
+   position: absolute;
+   top: 0;
+}
+
 .name-container {
    text-transform: uppercase;
    font-family: $font-stackDB;
@@ -156,7 +166,6 @@ nav {
    height: 7px;
    width: 20px;
    cursor: pointer;
-   // margin: 0 3px;
    position: relative;
 }
 .projects a:after {
@@ -178,31 +187,28 @@ nav {
 }
 
 
-   .vertical-text {
-      width: 100%;
-      margin: 0 auto;
-   }
+.vertical-text {
+   width: 100%;
+   margin: 0 auto;
+}
 
-   .scroll {
-      width: 40px;
-      -webkit-transform: rotate(270deg);
-      -ms-transform: rotate(270deg);
-      transform: rotate(270deg);
-      position: absolute;
-      right: 16px;
-      top: 435px;
-      display: block;
-      z-index: 10000;
-      border-bottom: 5px solid #EDD5D5;
-      font-size: 14px;
-      letter-spacing: 0.2px;
-      line-height: 20px;
-      color: $blk;
-      font-family: $font-stackCM;
-      span {
-         color:$white;
-      }
+.scroll {
+   width: 40px;
+   -webkit-transform: rotate(270deg);
+   -ms-transform: rotate(270deg);
+   transform: rotate(270deg);
+   display: block;
+   z-index: 10000;
+   border-bottom: 5px solid #EDD5D5;
+   font-size: 14px;
+   letter-spacing: 0.2px;
+   line-height: 20px;
+   color: $blk;
+   font-family: $font-stackCM;
+   span {
+      color:$white;
    }
+}
 
 
 
@@ -223,41 +229,52 @@ nav {
       display: block;
    }
 
-   .wrapper {
-      width: calc(100% - 20px);
-      margin: 0 auto;
-      // background-color: rgba(145, 255, 160, 0.2);
-   }
-
    .profile-img-container {
-      position: absolute;
+      width: 100%;
+      position: relative;
       right: 0;
-      left: 21%;
+      z-index: 400px;
+      max-height: 450px;
 
       .m-profile-img {
          width: 100%;
-         position: absolute;
-         right: 0;
-         left: 0;
-         height: 450px;
+         z-index: 1;
+         padding-left: 21%;
+         min-height: 450px;
       }
 
-      p {
-         top: 220px;
-         left: 20%;
-         right: 16%;
+      .copy {
          position: absolute;
-         text-align: left;
-         font-size: 12px;
-         letter-spacing: 0.15px;
-         line-height: 20px;
-         font-family: $font-stackCM;
-         color: $white;
+         z-index: 1000;
+         top: 220px;
+         left: 30.2%;
+
+         p {
+            text-align: left;
+            font-size: 12px;
+            letter-spacing: 0.15px;
+            line-height: 20px;
+            font-family: $font-stackCM;
+            color: $white;
+         }
+
       }
+
+   }
+
+   .text-container {
+      width: 10%;
+      position: relative;
+      margin: 0px -11% -10% 78%;
+      margin-top: -18px;
+      left: 20px;
+      right: 16px;
+      z-index: 700;
    }
 
    .name-container {
-      padding-top: 48px;
+      // padding-top: 48px;
+      padding-top: 55px;
       padding-left: 5px;
 
       .name {
