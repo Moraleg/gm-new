@@ -10,9 +10,9 @@
   font-style: normal; }
 @font-face {
   font-family: 'DINCondensed-Bold';
-  src: url("../fonts/INCondensedBold.eot");
+  src: url("../fonts/DINCondensedBold.eot");
   src: url("../fonts/DINCondensedBold.otf");
-  src: url("../fonts/INCondensedBold.woff") format("woff"), url("../fonts/INCondensedBold.ttf") format("truetype"), url("../fonts/INCondensedBold.svg") format("svg");
+  src: url("../fonts/DINCondensedBold.woff") format("woff"), url("../fonts/DINCondensedBold.ttf") format("truetype"), url("../fonts/DINCondensedBold.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 /* Screen Sizes */
@@ -24,39 +24,18 @@
   box-sizing: border-box; }
 
 body {
-  background: linear-gradient(-225deg, rgba(166, 189, 242, 0.15) 0%, rgba(157, 169, 232, 0.15) 42%, rgba(211, 187, 216, 0.15) 76%, rgba(249, 192, 176, 0.15) 100%) no-repeat fixed;
+  background: linear-gradient(-225deg, rgba(166, 189, 242, 0.15) 0%, rgba(211, 187, 216, 0.15) 42%, rgba(157, 169, 232, 0.15) 76%, rgba(249, 192, 176, 0.15) 100%) no-repeat fixed;
   width: 100%;
-  max-width: 1440px;
-  margin: 0;
+  max-width: 1665px;
+  margin: 0 auto;
   padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-header, nav {
-  width: 100%;
-  margin: 0 auto;
-  display: block; }
-
 p {
   margin: 0 auto;
   text-align: center; }
-
-nav {
-  margin: 0 auto 42px;
-  text-align: center; }
-  nav a {
-    width: 100%;
-    max-width: 225px;
-    padding-right: 38px;
-    text-decoration: none;
-    font-family: "CircularStd-Bold", "Helvetica", sans-serif;
-    font-size: 14px;
-    letter-spacing: 0.35px;
-    line-height: 18px;
-    color: #292B2F; }
-  nav a:last-of-type {
-    padding-right: 0; }
 
 .full-width {
   width: 100%; }
@@ -82,7 +61,7 @@ nav {
   z-index: 100; }
 
 .projects {
-  width: 80%;
+  width: 100%;
   z-index: 100;
   display: block;
   margin-top: 34px;
@@ -136,10 +115,31 @@ nav {
 ****************************/
 /************ Mobile *************/
 @media screen and (min-width: 320px) {
+  header, nav.nav {
+    width: 100%;
+    margin: 0 auto;
+    display: block; }
+
   .logo {
     z-index: 0;
     margin: 22px auto 16px;
     display: block; }
+
+  nav.nav {
+    margin: 0 auto 42px;
+    text-align: center; }
+    nav.nav a {
+      width: 100%;
+      max-width: 225px;
+      padding-right: 38px;
+      text-decoration: none;
+      font-family: "CircularStd-Bold", "Helvetica", sans-serif;
+      font-size: 14px;
+      letter-spacing: 0.35px;
+      line-height: 18px;
+      color: #292B2F; }
+    nav.nav a:last-of-type {
+      padding-right: 0; }
 
   .profile-img-container {
     width: 100%;
@@ -152,6 +152,8 @@ nav {
       z-index: 1;
       padding-left: 21%;
       min-height: 450px; }
+    .profile-img-container .t-profile-img, .profile-img-container .d-profile-img {
+      display: none; }
     .profile-img-container .copy {
       position: absolute;
       z-index: 1000;
@@ -211,6 +213,123 @@ nav {
       color: #FFF;
       background: linear-gradient(-134deg, #A59FD9 0%, #E8CBCA 100%); } }
 /************ TABLET *************/
+@media screen and (min-width: 768px) {
+  header, nav.nav {
+    width: auto;
+    margin: 0 auto 72px;
+    position: relative; }
+
+  .logo {
+    margin: 40px 0 0 40px;
+    display: inline-block;
+    position: relative; }
+
+  nav.nav {
+    margin: 40px 40px 0 0;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 0; }
+
+  .profile-img-container .t-profile-img {
+    display: block;
+    width: 100%;
+    z-index: 1;
+    padding-left: 50.7%;
+    min-height: 455px; }
+  .profile-img-container .m-profile-img, .profile-img-container .d-profile-img {
+    display: none; }
+  .profile-img-container .copy {
+    top: 200px;
+    left: 35.8%; }
+    .profile-img-container .copy p {
+      color: #292B2F; }
+
+  .wrapper {
+    width: calc(100% - 88px);
+    margin: 0 auto; }
+
+  .name-container {
+    padding-top: 52px;
+    padding-left: 115px; }
+    .name-container .name {
+      font-size: 63px;
+      color: #292B2F;
+      letter-spacing: 3.15px;
+      line-height: 75px;
+      margin: 0; }
+      .name-container .name span {
+        padding-left: 38px; }
+
+  .intro-container p, .projects {
+    margin-left: 16px; }
+
+  .intro-container p {
+    margin-top: -48px; }
+
+  .btn-container {
+    margin: 74px 0 0 65%; }
+
+  .text-container {
+    margin: -8.5% 0 0;
+    left: 48%; }
+    .text-container .scroll {
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none; } }
 /************ DESKTOP *************/
+@media screen and (min-width: 1440px) {
+  header {
+    margin-bottom: 62px; }
+    header .logo {
+      margin: 60px 0 0 60px; }
+    header nav.nav {
+      margin: 60px 60px 0 0; }
+
+  .wrapper {
+    width: calc(100% - 360px);
+    margin: 0 auto; }
+
+  .profile-img-container .d-profile-img {
+    display: block;
+    width: 100%;
+    z-index: 1;
+    padding-left: 50.4%;
+    max-height: 660px; }
+  .profile-img-container .m-profile-img, .profile-img-container .t-profile-img {
+    display: none; }
+  .profile-img-container .copy {
+    top: 330px;
+    left: 545px; }
+    .profile-img-container .copy p {
+      font-size: 14px;
+      letter-spacing: 0.2px; }
+
+  .name-container {
+    padding-top: 129px;
+    padding-left: 96px; }
+    .name-container .name {
+      font-size: 90px;
+      color: #292B2F;
+      letter-spacing: 4.5px;
+      line-height: 85px;
+      margin: 0; }
+      .name-container .name span {
+        padding-left: 52px; }
+
+  .intro-container, .navigation {
+    margin-left: -136px; }
+
+  .intro-container p {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 1.5px; }
+
+  .text-container {
+    margin: -57px 0 0;
+    left: 49%; }
+
+  .btn-container {
+    margin: 150px 0 0 95%; } }
 
 /*# sourceMappingURL=main.css.map */
