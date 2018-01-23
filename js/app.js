@@ -1,25 +1,25 @@
 // Image Slide Down
 
-$(document).ready(function(){
+$(document).ready(() => {
    $('.slideDown').slideDown(500, "swing");
+
 });
 
+// Scroll Jack
 
-(function($) {
-
-
-	var delta = 0;
-	var currentSlideIndex = 0;
-	var scrollThreshold = 45;
-	var slides = $('.slide');
-	var navSlides = $('.nav-slide');
-	var numSlides = slides.length;
-	// var p0 = $('#project-0');
-	// var p1 = $('.project-1');
-	// var p2 = $('#project-2');
+(($) => {
 
 
-	function elementScroll (e) {
+	let delta = 0;
+	let currentSlideIndex = 0;
+   const  scrollThreshold = 45;
+	const slides = $('.slide');
+	const navSlides = $('.nav-slide');
+	const numSlides = slides.length - 1;
+
+
+
+	const elementScroll = (e) => {
 
 		// --- Scrolling up ---
 		if (e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0) {
@@ -44,7 +44,7 @@ $(document).ready(function(){
 	}
 
 
-	function showSlide() {
+	const showSlide = () => {
 
 		// reset
 		delta = 0;
@@ -59,7 +59,7 @@ $(document).ready(function(){
 	}
 
 
-	function prevSlide() {
+	const prevSlide = () => {
 
 		currentSlideIndex--;
 
@@ -70,7 +70,7 @@ $(document).ready(function(){
 		showSlide();
 	}
 
-	function nextSlide() {
+	const nextSlide = () => {
 
 		currentSlideIndex++;
 
@@ -88,7 +88,7 @@ $(document).ready(function(){
 
 
 	// On Arrow Keys
-	$(document).keyup(function(e) {
+	$(document).keyup((e) => {
 		// Left or back arrows
 		if ((e.which === 37) ||  (e.which === 38)){
 			prevSlide();
@@ -103,7 +103,7 @@ $(document).ready(function(){
 	$('.nav-slide').on('click', function(e) {
 		e.preventDefault();
 		// get current slide
-		var current = $('.active').data('slide'),
+		const current = $('.active').data('slide'),
 		// get button data-slide
 		next = $(this).data('slide');
 

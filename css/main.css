@@ -24,14 +24,14 @@
   box-sizing: border-box; }
 
 body {
-  background: linear-gradient(-225deg, rgba(166, 189, 242, 0.15) 0%, rgba(211, 187, 216, 0.15) 42%, rgba(157, 169, 232, 0.15) 76%, rgba(249, 192, 176, 0.15) 100%) no-repeat fixed;
   width: 100%;
   max-width: 1665px;
   margin: 0 auto;
   padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background: linear-gradient(-225deg, rgba(166, 189, 242, 0.15) 0%, rgba(211, 187, 216, 0.15) 42%, rgba(157, 169, 232, 0.15) 76%, rgba(249, 192, 176, 0.15) 100%) no-repeat fixed; }
 
 p {
   margin: 0 auto;
@@ -206,23 +206,27 @@ header {
 
 .slide:nth-child(1) {
   z-index: 10;
-  background: pink; }
+  background: white; }
 
 .slide:nth-child(2) {
   z-index: 9;
-  background: #bcdfe6; }
+  background: white; }
 
 .slide:nth-child(3) {
   z-index: 8;
-  background: #5eb0c1; }
+  background: white; }
 
 .slide:nth-child(4) {
   z-index: 7;
-  background: lavenderblush; }
+  background: white; }
 
 .slide:nth-child(5) {
   z-index: 6;
-  background: lightcoral; }
+  background: white; }
+
+.slide:nth-child(6) {
+  z-index: 5;
+  background: white; }
 
 .active.slide {
   height: 100%; }
@@ -251,28 +255,32 @@ header {
   position: relative;
   z-index: 100; }
 
-#projects nav {
+.navigation {
   width: 100%;
   z-index: 100;
   display: block;
   margin-bottom: 0; }
 
-#projects nav a {
+.navigation a {
   display: block;
   height: 7px;
   width: 20px;
   cursor: pointer;
   position: relative; }
 
-#projects nav a:after {
+.navigation a:after {
   height: 2px;
   width: 12px;
   position: absolute;
   display: block;
   content: "";
-  background-color: #C4C2C7; }
+  background-color: #C4C2C7;
+  -moz-transition: width 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  -o-transition: width 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition: width 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: width 600ms cubic-bezier(0.075, 0.82, 0.165, 1); }
 
-#projects nav a.active:after {
+.navigation a.active:after {
   background-color: #9F96DF;
   width: 20px;
   -moz-transition: width 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -332,13 +340,15 @@ header {
     nav.nav a:last-of-type {
       padding-right: 0; }
 
-  .profile-img-container {
+  .profile-img-container, .project-img-container {
     width: 100%;
     position: relative;
     right: 0;
     z-index: 400;
     max-height: 450px;
-    padding-left: 21%;
+    padding-left: 21%; }
+
+  .profile-img-container {
     top: 131px; }
     .profile-img-container .m-profile-img {
       width: 100%;
@@ -389,14 +399,15 @@ header {
     line-height: 20px;
     letter-spacing: 1px;
     text-align: left;
-    margin-top: 43px; }
+    margin-bottom: 34px;
+    margin-top: 14%; }
 
-  .intro-container p, #projects nav {
+  .intro-container p, nav.projects {
     margin-left: 30px; }
 
   .navigation {
     position: relative;
-    top: 355px;
+    top: 238px;
     z-index: 10; }
 
   .btn-container {
@@ -410,7 +421,78 @@ header {
       font-family: "CircularStd-Medium", "Helvetica", sans-serif;
       letter-spacing: 0.4px;
       color: #FFF;
-      background: linear-gradient(-134deg, #A59FD9 0%, #E8CBCA 100%); } }
+      background: linear-gradient(-134deg, #A59FD9 0%, #E8CBCA 100%); }
+
+  .project-img-container {
+    top: 140px; }
+    .project-img-container img {
+      width: 100%; }
+    .project-img-container img.t-sw-img, .project-img-container img.d-sw-img {
+      display: none; }
+    .project-img-container img.m-sw-img {
+      max-height: 450px; }
+
+  .project-headline {
+    position: relative; }
+    .project-headline h2 {
+      position: absolute;
+      font-family: "DinCondensed-Bold", "Helvetica", sans-serif;
+      font-size: 28px;
+      letter-spacing: 1px;
+      line-height: 30px;
+      color: #292B2F;
+      text-transform: uppercase;
+      margin: 48px 0 0 -50px; }
+
+  .view-btn-container {
+    position: relative;
+    bottom: 15px;
+    right: 8%;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto; }
+    .view-btn-container a {
+      text-decoration: none;
+      padding: 18px 50px;
+      font-size: 16px;
+      font-family: "CircularStd-Medium", "Helvetica", sans-serif;
+      letter-spacing: 0.4px;
+      color: #FFF;
+      background: linear-gradient(-134deg, #A59FD9 0%, #E8CBCA 100%); }
+
+  .role-container {
+    position: relative;
+    right: 35px;
+    top: 58px; }
+    .role-container ul {
+      padding: 0;
+      margin: 0;
+      height: auto; }
+      .role-container ul li {
+        list-style: none;
+        font-family: "CircularStd-Bold", "Helvetica", sans-serif;
+        font-size: 10px;
+        color: #292B2F;
+        letter-spacing: 1.11px;
+        line-height: 18px;
+        text-transform: uppercase;
+        display: inline-block;
+        padding-right: 68px;
+        text-align: left; }
+      .role-container ul li:last-child {
+        padding-right: 0; }
+    .role-container ul.dev-list li {
+      font-family: "CircularStd-Medium", "Helvetica", sans-serif;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      line-height: 20px;
+      text-transform: none; }
+    .role-container .dev {
+      padding-right: 30px; }
+    .role-container .agency {
+      padding-right: 49px; }
+    .role-container .rgba {
+      padding-right: 60px; } }
 /************ TABLET *************/
 @media screen and (min-width: 460px) {
   .profile-img-container .m-profile-img {
@@ -426,11 +508,11 @@ header {
   .name-container {
     padding-left: 30px; } }
 @media screen and (min-width: 650px) {
-  .intro-container p, #projects nav {
+  .intro-container p, nav.projects {
     margin-left: 50px; }
 
   .intro-container p {
-    margin-top: 50%; }
+    margin-top: 18%; }
 
   .profile-img-container .copy {
     top: 65%; }
@@ -485,11 +567,11 @@ header {
       .name-container .name span {
         padding-left: 38px; }
 
-  .intro-container p, #projects nav {
+  .intro-container p, nav.projects {
     margin-left: 65px; }
 
   .intro-container p {
-    margin-top: -45px; }
+    margin-top: -95px; }
 
   .btn-container {
     width: 10%;
@@ -501,7 +583,35 @@ header {
   .text-container .scroll {
     -webkit-transform: none;
     -ms-transform: none;
-    transform: none; } }
+    transform: none; }
+
+  .project-headline h2 {
+    margin: -18px 0 0 53px;
+    font-size: 35px;
+    letter-spacing: 1.75px;
+    line-height: 40px; }
+
+  .project-img-container img.m-sw-img, .project-img-container img.d-sw-img {
+    display: none; }
+  .project-img-container img.t-sw-img {
+    display: block; }
+
+  .view-btn-container {
+    bottom: -86px;
+    left: 24%; }
+    .view-btn-container a {
+      box-shadow: 0 10px 20px 0; }
+
+  .role-container {
+    right: 0; }
+    .role-container .role {
+      padding-right: 82px; }
+    .role-container .dev {
+      padding-right: 44px; }
+    .role-container .agency {
+      padding-right: 65px; }
+    .role-container .rgba {
+      padding-right: 76px; } }
 @media screen and (min-width: 960px) {
   .name-container {
     padding-left: 205px; }
@@ -561,7 +671,7 @@ header {
       .name-container .name span {
         padding-left: 52px; }
 
-  .intro-container p, #projects nav {
+  .intro-container p, nav.projects {
     margin-left: 60px; }
 
   .intro-container p {
@@ -577,6 +687,37 @@ header {
       margin: 0; }
 
   .btn-container {
-    margin: -82px 0 0 -77px; } }
+    margin: -82px 0 0 -77px; }
+
+  .project-img-container img.d-sw-img {
+    display: block; }
+  .project-img-container img.m-sw-img, .project-img-container img.t-sw-img {
+    display: none; }
+  .project-img-container .project-headline h2 {
+    font-size: 50px;
+    letter-spacing: 2px;
+    line-height: 50px;
+    margin: -22px 0 0 53px; }
+
+  .view-btn-container {
+    left: 35%;
+    right: 0; }
+
+  .role-container {
+    left: 115px; }
+    .role-container ul li {
+      font-size: 12px;
+      letter-spacing: 1.33px;
+      line-height: 18px; }
+    .role-container ul.dev-list {
+      padding-top: 10px; }
+    .role-container .role {
+      padding-right: 140px; }
+    .role-container .dev {
+      padding-right: 108px; }
+    .role-container .agency {
+      padding-right: 118px; }
+    .role-container .rgba {
+      padding-right: 140px; } }
 
 /*# sourceMappingURL=main.css.map */
