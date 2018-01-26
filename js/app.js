@@ -99,7 +99,7 @@ $(document).ready(() => {
 		}
 	});
 
-	// On Nav Control
+	// On Nav Control - need to make this specific to page
 	$('.nav-slide').on('click', function(e) {
 		e.preventDefault();
 		// get current slide
