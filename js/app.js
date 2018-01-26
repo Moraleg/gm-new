@@ -1,12 +1,13 @@
-// Image Slide Down
 
+// Image Slide Down
 $(document).ready(() => {
    $('.slideDown').slideDown(500, "swing");
 
+
 });
 
-// Scroll Jack
 
+// Scroll Jack
 (($) => {
 
 
@@ -18,6 +19,10 @@ $(document).ready(() => {
 	const numSlides = slides.length - 1;
 
 
+
+   var currentSlide = function() {
+      showSlides(currentSlideIndex = n);
+   };
 
 	const elementScroll = (e) => {
 
@@ -44,7 +49,7 @@ $(document).ready(() => {
 	}
 
 
-	const showSlide = () => {
+	const showSlide = (n) => {
 
 		// reset
 		delta = 0;
@@ -56,6 +61,18 @@ $(document).ready(() => {
 		navSlides.each(function(i, slide, slideNav) {
 			$(slide).toggleClass('active', (i == currentSlideIndex));
 		});
+
+      // var i;
+      // var slider = document.getElementsByClassName('slide');
+      // var projectNav = document.getElementsByClassName('nav-slide');
+      // if (n > slider.length) {currentSlideIndex = 1};
+      // if (n < 1) {currentSlideIndex = slider.length};
+      // for (i = 0; i < projectNav.length; i++){
+      //    projectNav[i].className = projectNav[i].className.replace(" active", "");
+      // }
+      // projectNav[currentSlideIndex-1].className += " active";
+
+
 	}
 
 
@@ -110,12 +127,15 @@ $(document).ready(() => {
 		$('.nav-slide').removeClass('active');
 		$(this).addClass('active');
 
-		if (current >= next) {
-			prevSlide();
-		} else {
-			nextSlide();
-		}
+		// if (current >= next) {
+		// 	prevSlide();
+		// } else {
+		// 	nextSlide();
+		// }
+
 	});
+
+
 
 
 
