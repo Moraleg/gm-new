@@ -127,11 +127,11 @@ $(document).ready(() => {
 		$('.nav-slide').removeClass('active');
 		$(this).addClass('active');
 
-		// if (current >= next) {
-		// 	prevSlide();
-		// } else {
-		// 	nextSlide();
-		// }
+		if (current >= next) {
+			prevSlide();
+		} else {
+			nextSlide();
+		}
 
 	});
 
