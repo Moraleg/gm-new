@@ -2,8 +2,8 @@ var delta;
 dragThreshold = 0.15;
 dragStart = null;
 percentage = 0;
-target,
-previousTarget;
+var target;
+var previousTarget;
 
 function touchStart(event) {
    if (dragStart !== null) {
