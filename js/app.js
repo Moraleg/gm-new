@@ -62,17 +62,6 @@ $(document).ready(() => {
 			$(slide).toggleClass('active', (i == currentSlideIndex));
 		});
 
-      // var i;
-      // var slider = document.getElementsByClassName('slide');
-      // var projectNav = document.getElementsByClassName('nav-slide');
-      // if (n > slider.length) {currentSlideIndex = 1};
-      // if (n < 1) {currentSlideIndex = slider.length};
-      // for (i = 0; i < projectNav.length; i++){
-      //    projectNav[i].className = projectNav[i].className.replace(" active", "");
-      // }
-      // projectNav[currentSlideIndex-1].className += " active";
-
-
 	}
 
 

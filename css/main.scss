@@ -291,10 +291,10 @@ nav.nav a:after {
    height: 0;
    width: 100%;
    overflow: hidden;
-   -webkit-transition: height 0.4s ease-out;
-   -moz-transition: height 0.4s ease-out;
-   -o-transition: height 0.4s ease-out;
-   transition: height 0.4s ease-out;
+   -webkit-transition: height 0.5s ease-out;
+   -moz-transition: height 0.5s ease-out;
+   -o-transition: height 0.5s ease-out;
+   transition: height 0.5s ease-out;
 }
 
 .slide:nth-child(1) { z-index:10; background: linear-gradient(-225deg, #F2F5FD 0%, #F1F3FA 42%, #F7F5FA 76%, #FEF6F5 100%); }
