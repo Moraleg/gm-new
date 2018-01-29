@@ -535,7 +535,7 @@ nav.nav a:after {
       text-align: center; }
 
   .view-btn-container:hover, .desktop-btn:hover, .btn-container:hover {
-    background-image: linear-gradient(-134deg, #E9C1C0 0%, #8A82CC 100%);
+    background-image: linear-gradient(-134deg, #8A82CC 0%, #E9C1C0 100%);
     box-shadow: 0 10px 20px 0 rgba(147, 162, 216, 0.5);
     -webkit-transition: box-shadow ease-out .4s;
     -moz-transition: box-shadow ease-out .4s;
@@ -546,7 +546,7 @@ nav.nav a:after {
     position: absolute;
     right: 35px;
     left: 14%;
-    bottom: 30px; }
+    bottom: 60px; }
     .role-container ul {
       padding: 0;
       margin: 0;
