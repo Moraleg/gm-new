@@ -3,7 +3,7 @@
 (($) => {
 
    /*=========================================*\
-  			  Variables
+  		Variables
   	\*=========================================*/
 
 	let delta = 0; //distance scrolled/dragged in slide
@@ -15,15 +15,11 @@
 	const navSlides = $('.nav-slide');
    const activeSlideClass = ('active');
 	const numSlides = slides.length - 1; // total number of slides
-   // const isTouch = Modernizr.touch;
-
 
 
    /*=========================================*\
       Scroll - DOMScroll and
       mousewheel events
-
-
    \*=========================================*/
 
 	const elementScroll = (e) => {
@@ -57,14 +53,14 @@
 
 
    /*=========================================*\
-         Slide control functions
+      Slide control functions
 
-         Used to update slide via any nav menthod
+      Used to update slide via any nav menthod
 
-           -showSlide
-           -prevSlide
-           -nextSlide
-           -updateSlideNav
+         -showSlide
+         -prevSlide
+         -nextSlide
+         -updateSlideNav
    \*=========================================*/
 
 
@@ -127,7 +123,6 @@
 
    /*=========================================*\
    	Alternate slide navigation
-
    		- arrow keys
    		- nav click event
    \*=========================================*/
@@ -241,9 +236,6 @@
    	'touchmove': touchMove,
    	'touchend': touchEnd
    });
-
-
-
 
 
 

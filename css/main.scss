@@ -307,12 +307,6 @@ nav.nav a:after {
 	height: 100%;
 }
 
-#scrolljack .slide.no-animation {
-  -webkit-transition: none;
-  -moz-transition: none;
-  transition: none;
-}
-
 // .wrapper {
 //    width: calc(100% - 20px);
 //    margin: 0 auto;
@@ -602,7 +596,7 @@ nav.nav a:after {
    .btn-container {
       width: 190px;
       height: 55px;
-      margin: -90px 0 0 -52px;
+      margin: -120px 0 0 -52px;
       position: relative;
       z-index:100;
       cursor: pointer;
@@ -698,7 +692,7 @@ nav.nav a:after {
    }
 
    .view-btn-container:hover, .desktop-btn:hover, .btn-container:hover {
-      background-image: linear-gradient(-134deg,#8A82CC 0%, #E9C1C0 100%);
+      background: linear-gradient(-134deg,#8A82CC 0%, #E9C1C0 100%);
       box-shadow: 0 10px 20px 0 rgba(147,162,216,0.5);
       -webkit-transition: box-shadow ease-out .4s;
       -moz-transition: box-shadow ease-out .4s;
@@ -713,6 +707,7 @@ nav.nav a:after {
       right: 35px;
       left: 14%;
       bottom: 60px;
+      z-index: 1000;
       ul {
          padding: 0;
          margin: 0;
