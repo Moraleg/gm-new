@@ -166,13 +166,12 @@
 
    // mobile
 
-    var dragStart = null;	 // used to determine touch / drag distance
-    var percentage = 0;
-    var target,
+    let dragStart = null;	 // used to determine touch / drag distance
+    let percentage = 0;
+    let target,
     previousTarget;
-    var windowHeight = $(window).height();
 
-   var touchStart = function(e) {
+   const touchStart = (e) => {
 
    	if (dragStart !== null) { return; }
    	if (e.originalEvent.touches) {
@@ -186,57 +185,42 @@
    	target = slides.eq(currentSlideIndex)[0];
       console.log(target);
 
-   	// disable transitions while dragging
-   	target.classList.add('no-animation');
-
    	previousTarget = slides.eq(currentSlideIndex-1)[0];
-   	previousTarget.classList.add('no-animation');
    };
 
-   var touchMove = function(e) {
+   const touchMove = (e) => {
 
    	if (dragStart === null) { return; }
+
    	if (e.originalEvent.touches) {
    		event = e.originalEvent.touches[0];
    	}
 
    	delta = dragStart - event.clientY;
+
    	percentage = delta;
 
       if (e.orgiginalEvent.detail < 0 || e.originalEvent.touches > 0) {
+
          percentage--;
-         // Going down/next. Animate the height of the target element.
+
          if (Math.abs(percentage) >= dragThreshold) {
             prevSlide();
-            // target.style.height = (100-(percentage*100))+'%';
-            // if (previousTarget) {
-            // 	previousTarget.style.height = ''; 	// reset
-            // }
          }
-      }
-
-
-   	// Going up/prev. Animate the height of the _previous_ element.
-   	else  {
+      } else  {
          percentage++;
          if(percentage >= dragThreshold) {
-                  prevSlide();
+            nextSlide();
          }
-   		// previousTarget.style.height = (-percentage*100)+'%';
-   		// target.style.height = '';	// reset
    	}
 
    	// Don't drag element. This is important.
    	return false;
    };
 
-   var touchEnd = function() {
+   const touchEnd = () => {
 
    	dragStart = null;
-   	target.classList.remove('no-animation');
-   	if (previousTarget) {
-   		previousTarget.classList.remove('no-animation');
-   	}
 
    	if (percentage >= dragThreshold) {
    		nextSlide();
