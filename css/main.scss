@@ -307,6 +307,11 @@ nav.nav a:after {
 	height: 100%;
 }
 
+#scrolljack .slide.no-animation {
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
 
 // .wrapper {
 //    width: calc(100% - 20px);

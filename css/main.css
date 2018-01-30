@@ -255,6 +255,11 @@ nav.nav a:after {
 .active.slide {
   height: 100%; }
 
+#scrolljack .slide.no-animation {
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none; }
+
 .container {
   position: absolute;
   top: 0;
