@@ -13,7 +13,6 @@
 	const slides = $('.slide');
    const slideNavSelector = $('.projects');
 	const navSlides = $('.nav-slide');
-   const activeSlideClass = ('active');
 	const numSlides = slides.length - 1; // total number of slides
 
 

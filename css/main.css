@@ -390,7 +390,6 @@ nav.nav a:after {
     position: relative;
     right: 0;
     z-index: 400;
-    max-height: 450px;
     padding-left: 21%; }
 
   .profile-img-container {
@@ -546,8 +545,9 @@ nav.nav a:after {
     position: absolute;
     right: 35px;
     left: 14%;
-    bottom: -10px;
-    z-index: 1000; }
+    bottom: 60px;
+    z-index: 1000;
+    max-width: 415px; }
     .role-container ul {
       padding: 0;
       margin: 0;
@@ -852,9 +852,9 @@ nav.nav a:after {
     margin: -82px 0 0 -77px; }
 
   .project-img-container {
-    background-image: url("../images/sw-img-d@2x.png");
+    background-image: url("../images/sw-img-d.gif");
     background-size: cover;
-    height: 61.2vh;
+    height: 63.5vh;
     margin-left: 10%; }
     .project-img-container img.d-sw-img {
       display: block; }
