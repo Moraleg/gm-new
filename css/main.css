@@ -333,6 +333,7 @@ nav.nav a:after {
 ****************************/
 /************ Mobile *************/
 @media screen and (min-width: 320px) {
+  /*------------ MAIN SECTION (MOBILE)--------------*/
   header, nav.nav {
     width: 100%;
     margin: 0 auto;
@@ -385,14 +386,12 @@ nav.nav a:after {
   nav.nav .contact:after {
     right: 0px; }
 
-  .profile-img-container, .project-img-container {
+  .profile-img-container {
     width: 100%;
     position: relative;
     right: 0;
     z-index: 400;
-    padding-left: 21%; }
-
-  .profile-img-container {
+    padding-left: 21%;
     top: 131px; }
     .profile-img-container .m-profile-img {
       width: 100%;
@@ -448,7 +447,7 @@ nav.nav a:after {
     line-height: 20px;
     letter-spacing: 1px;
     text-align: left;
-    margin-bottom: 25px;
+    margin-bottom: 34px;
     margin-top: 14%; }
 
   .intro-container p, nav.projects {
@@ -482,7 +481,13 @@ nav.nav a:after {
       top: 50%;
       transform: translate(0, -50%); }
 
+  /*------------PROJECTS (MOBILE) --------------*/
   .project-img-container {
+    width: 100%;
+    position: relative;
+    right: 0;
+    z-index: 400;
+    padding-left: 21%;
     top: 140px; }
     .project-img-container img {
       width: 100%; }
@@ -504,9 +509,7 @@ nav.nav a:after {
       margin: 48px 0 0 -50px; }
 
   .mobile-btn {
-    bottom: 34px;
-    right: 0%;
-    margin: 0 auto; }
+    bottom: 34px; }
 
   .desktop-btn {
     display: none; }
@@ -542,13 +545,7 @@ nav.nav a:after {
     transition: box-shadow ease-out .4s; }
 
   .role-container {
-    position: absolute;
-    right: 35px;
-    left: 14%;
-    bottom: 1vh;
-    z-index: 1000;
-    max-width: 415px;
-    height: 0vh; }
+    display: none; }
     .role-container ul {
       padding: 0;
       margin: 0;
@@ -584,6 +581,7 @@ nav.nav a:after {
       padding-right: 60px; } }
 /************ TABLET *************/
 @media screen and (min-width: 460px) {
+  /*------------MAIN SECTION (460px) --------------*/
   .profile-img-container {
     right: -10px; }
     .profile-img-container .m-profile-img {
@@ -604,9 +602,11 @@ nav.nav a:after {
   .btn-container {
     margin: -100px 0 0 -52px; }
 
+  /*------------PROJECTS SECTION (460px) ------------*/
   .project-img-container {
     padding-left: 18%; } }
 @media screen and (min-width: 650px) {
+  /*------------MAIN SECTION (650px) --------------*/
   .intro-container p, nav.projects {
     margin-left: 50px; }
 
@@ -622,9 +622,33 @@ nav.nav a:after {
   .name-container .name span {
     padding-left: 28px; }
 
+  /*------------PROJECTS SECTION (650px) ------------*/
+  .project-img-container {
+    margin-left: 18%;
+    padding: 0;
+    background-size: cover;
+    height: 61.5vh; }
+    .project-img-container .m-sw-img {
+      display: none; }
+
+  #two .project-img-container {
+    background-image: url("../images/sw-img-t@2x.png"); }
+
+  #three .project-img-container {
+    background-image: url("../images/paradisepizza-t@2x.png"); }
+
+  #four .project-img-container {
+    background-image: url("../images/adventuretimes-t2@2x.png"); }
+
+  #five .project-img-container {
+    background-image: url("../images/fitkids-t@2x.png"); }
+
+  #six .project-img-container {
+    background-image: url("../images/c4-t@2x.png"); }
+
   .bottom {
     width: 100%;
-    height: 200px;
+    height: 15.5vh;
     position: absolute;
     bottom: 0; }
     .bottom .desktop-btn {
@@ -633,10 +657,19 @@ nav.nav a:after {
       top: 50%;
       transform: translate3d(190px, -50%, 0px);
       z-index: 1000; }
+    .bottom .role-container {
+      display: block;
+      position: absolute;
+      top: 4.7vh;
+      right: 35px;
+      left: 14%;
+      z-index: 1000;
+      max-width: 415px; }
 
   .mobile-btn {
     display: none; } }
 @media screen and (min-width: 768px) {
+  /*------------MAIN SECTION (768px) --------------*/
   header, nav.nav {
     width: auto;
     margin: 0 auto 72px;
@@ -704,42 +737,74 @@ nav.nav a:after {
     -ms-transform: none;
     transform: none; }
 
+  /*------------PROJECTS SECTION (768px) -----------*/
   .project-headline h2 {
-    margin: -18px 0 0 53px;
+    margin: -18px 0 0 52px;
     font-size: 35px;
     letter-spacing: 1.75px;
     line-height: 40px; }
 
   .project-img-container {
-    padding-left: 162px; }
+    margin-left: 162px;
+    padding: 0;
+    height: 55vh !important; }
     .project-img-container img.m-sw-img, .project-img-container img.d-sw-img {
       display: none; }
     .project-img-container img.t-sw-img {
       display: block; }
 
-  .bottom .view-btn-container {
-    left: 44px;
-    right: 0; }
-  .bottom .role-container {
-    left: 162px;
-    right: 0;
-    z-index: 1000; }
-    .bottom .role-container .role {
-      padding-right: 82px; }
-    .bottom .role-container .dev {
-      padding-right: 43px; }
-    .bottom .role-container .agency {
-      padding-right: 65px; }
-    .bottom .role-container .frlnce {
-      padding-right: 51px; }
-    .bottom .role-container .ga {
-      padding-right: 98px; }
-    .bottom .role-container .rgba {
-      padding-right: 76px; }
+  #two .project-img-container {
+    background-image: url("../images/sw-img-t@2x.png");
+    background-size: cover;
+    background-position-y: 25%; }
+
+  #three .project-img-container {
+    background-image: url("../images/paradisepizza-t@2x.png");
+    background-size: cover;
+    background-position-y: 25%; }
+
+  #four .project-img-container {
+    background-image: url("../images/adventuretimes-t2@2x.png");
+    background-size: contain;
+    background-position: 25%;
+    background-repeat: no-repeat;
+    background-color: #EFF1F8; }
+
+  #six .project-img-container {
+    background-image: url("../images/c4-t@2x.png");
+    background-size: contain;
+    background-position: 25%;
+    background-repeat: no-repeat;
+    background-color: #E9E9F3; }
+
+  .bottom {
+    height: 24vh; }
+    .bottom .view-btn-container {
+      left: 44px;
+      right: 0; }
+    .bottom .role-container {
+      display: block;
+      left: 162px;
+      top: 9vh;
+      right: 0;
+      z-index: 1000; }
+      .bottom .role-container .role {
+        padding-right: 82px; }
+      .bottom .role-container .dev {
+        padding-right: 43px; }
+      .bottom .role-container .agency {
+        padding-right: 65px; }
+      .bottom .role-container .frlnce {
+        padding-right: 51px; }
+      .bottom .role-container .ga {
+        padding-right: 98px; }
+      .bottom .role-container .rgba {
+        padding-right: 76px; }
 
   .mobile-btn {
     display: none; } }
 @media screen and (min-width: 960px) {
+  /*------------MAIN SECTION (960px) --------------*/
   .name-container {
     margin-top: 220px;
     margin-left: 205px; }
@@ -758,12 +823,20 @@ nav.nav a:after {
   .intro-container p {
     margin-top: -60px; }
 
-  .bottom .role-container {
-    left: 218px; }
-  .bottom .view-btn-container {
-    left: 12%; } }
+  /*------------PROJECTS SECTION (960px) ------------*/
+  #two .project-img-container, #three .project-img-container, #four .project-img-container, #five .project-img-container, #six .project-img-container {
+    height: 56vh !important; }
+
+  .bottom {
+    height: 23vh; }
+    .bottom .role-container {
+      top: 8.5vh;
+      left: 218px; }
+    .bottom .view-btn-container {
+      left: 12%; } }
 /************ DESKTOP *************/
 @media screen and (min-width: 1200px) {
+  /*------------MAIN SECTION (1200px) --------------*/
   .profile-img-container .copy {
     top: 65%;
     left: 39%; }
@@ -790,14 +863,25 @@ nav.nav a:after {
   .text-container .vertical-text {
     margin-top: -60px; }
 
+  /*------------PROJECTSSECTION (1200px) ------------*/
   .project-img-container {
-    height: 63.5vh; }
+    margin-left: 162px;
+    padding: 0; }
 
-  .bottom .role-container {
-    left: 275px; }
-  .bottom .view-btn-container {
-    left: 21%; } }
+  #two .project-img-container, #three .project-img-container, #four .project-img-container, #five .project-img-container, #six .project-img-container {
+    height: 63.5vh !important; }
+
+  .bottom {
+    height: 19.125vh; }
+    .bottom .role-container {
+      position: relative;
+      top: 0;
+      bottom: 0;
+      left: 275px; }
+    .bottom .view-btn-container {
+      left: 21%; } }
 @media screen and (min-width: 1440px) {
+  /*------------MAIN SECTION (1440px) --------------*/
   header {
     margin-bottom: 62px; }
     header .logo {
@@ -855,6 +939,7 @@ nav.nav a:after {
   .btn-container {
     margin: -82px 0 0 -77px; }
 
+  /*------------PROJECTS SECTION (1440px) -----------*/
   #two .project-img-container {
     background-image: url("../images/sw-img-d2.gif");
     background-size: cover; }
@@ -869,6 +954,10 @@ nav.nav a:after {
 
   #five .project-img-container {
     background-image: url("../images/fitkids-d@2x.png");
+    background-size: cover; }
+
+  #six .project-img-container {
+    background-image: url("../images/c4-d@2x.png");
     background-size: cover; }
 
   .project-img-container {

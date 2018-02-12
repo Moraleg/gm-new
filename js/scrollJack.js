@@ -30,7 +30,10 @@
 
 			if ( Math.abs(delta) >= scrollThreshold) {
 				prevSlide();
+				// $('.role-container').fadeOut();
+				// $('.role-container').fadeIn();
 			}
+
 
 		} else { // --- Scrolling down ---
 
@@ -38,6 +41,8 @@
 
 			if (delta >= scrollThreshold) {
 				nextSlide();
+				// $('.role-container').fadeIn();
+				//
 			}
 		}
 
