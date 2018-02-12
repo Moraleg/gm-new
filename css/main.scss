@@ -579,7 +579,7 @@ nav.nav a:after {
       line-height: 20px;
       letter-spacing: 1px;
       text-align: left;
-      margin-bottom: 34px;
+      margin-bottom: 25px;
       margin-top: 14%
    }
 
@@ -623,8 +623,6 @@ nav.nav a:after {
       }
 
    }
-
-
 
    .project-img-container {
       top: 140px;
@@ -704,9 +702,10 @@ nav.nav a:after {
       position: absolute;
       right: 35px;
       left: 14%;
-      bottom: 60px;
+      bottom: 15vh;
       z-index: 1000;
       max-width: 415px;
+      height: 0vh;
       ul {
          padding: 0;
          margin: 0;
@@ -1221,14 +1220,36 @@ nav.nav a:after {
       margin: -82px 0 0 -77px;
    }
 
+   #two {
+      .project-img-container {
+         background-image: url('../images/sw-img-d2.gif');
+         background-size: cover;
+      }
+   }
+
+   #three {
+      .project-img-container {
+         background-image: url('../images/paradisepizza-d@2x.png');
+         background-size: cover;
+      }
+   }
+
+   #four {
+      .project-img-container {
+         background-image: url('../images/adventuretimes-d2@2x.png');
+         background-size: cover;
+         // background-repeat: no-repeat;
+      }
+   }
+   #five {
+      .project-img-container {
+         background-image: url('../images/fitkids-d@2x.png');
+         background-size: cover;
+      }
+   }
    .project-img-container {
-      background-image: url('../images/sw-img-d2.gif');
-      background-size: cover;
       height: 63.5vh;
       margin-left: 10%;
-      img.d-sw-img {
-         display: block;
-      }
 
       img.m-sw-img, img.t-sw-img {
          display: none;
