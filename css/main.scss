@@ -54,7 +54,7 @@ $desktop: 1440px;
 /* Fonts */
 $font-stackCB: 'Apercu-Regular', 'Helvetica', sans-serif;
 $font-stackCM: 'Apercu-Regular', 'Helvetica', sans-serif;
-$font-stackDB:'DinCondensed-Bold', 'Helvetica', sans-serif;
+$font-stackDB:'DINCondensed-Bold', 'Helvetica', sans-serif;
 
 /* Colors */
 $bg-gradient: linear-gradient(-225deg, rgba(166,189,242,0.15) 0%, rgba(211,187,216,0.15) 42%, rgba(157,169,232,0.15)  76%,  rgba(249,192,176,0.15) 100%) no-repeat fixed;
@@ -572,7 +572,7 @@ nav.nav a:after {
       line-height: 20px;
       letter-spacing: 1px;
       text-align: left;
-      margin-bottom: 34px;
+      margin-bottom: 25px;
       margin-top: 14%
    }
 

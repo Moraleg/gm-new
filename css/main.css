@@ -272,7 +272,7 @@ nav.nav a:after {
 
 .name-container {
   text-transform: uppercase;
-  font-family: "DinCondensed-Bold", "Helvetica", sans-serif;
+  font-family: "DINCondensed-Bold", "Helvetica", sans-serif;
   position: relative;
   z-index: 100; }
 
@@ -458,7 +458,7 @@ nav.nav a:after {
     line-height: 20px;
     letter-spacing: 1px;
     text-align: left;
-    margin-bottom: 34px;
+    margin-bottom: 25px;
     margin-top: 14%; }
 
   .intro-container p, nav.projects {
@@ -511,7 +511,7 @@ nav.nav a:after {
     position: relative; }
     .project-headline h2 {
       position: absolute;
-      font-family: "DinCondensed-Bold", "Helvetica", sans-serif;
+      font-family: "DINCondensed-Bold", "Helvetica", sans-serif;
       font-size: 28px;
       letter-spacing: 1px;
       line-height: 30px;

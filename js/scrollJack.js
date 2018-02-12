@@ -15,6 +15,13 @@
 	const navSlides = $('.nav-slide');
 	const numSlides = slides.length - 1; // total number of slides
 
+	const projects = $('#projects');
+	const sectionTwo = $('#two');
+	const sectionThree = $('#three');
+	const intro = $('.intro-container p') //change nav text per section
+
+
+
 
    /*=========================================*\
       Scroll - DOMScroll and
@@ -22,6 +29,8 @@
    \*=========================================*/
 
 	const elementScroll = (e) => {
+
+		introChange();
 
 		// --- Scrolling up ---
 		if (e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0) {
@@ -43,11 +52,20 @@
 				nextSlide();
 				// $('.role-container').fadeIn();
 				//
+				//
+				// // //if the projects section height is less than 100% fade the role container out.
+				//
+				// if(currentSlideIndex === 2) {
+				// 	console.log(currentSlideIndex);
+				//    // console.log('im in section two');
+				// 	$('#two .role-container').fadeOut();
+				// }
 			}
 		}
 
 		// Prevent page from scrolling
 		return false;
+
 	}
 
    // On Mouse Scroll
@@ -133,14 +151,17 @@
 
 	// On Arrow Keys
 	$(document).keyup((e) => {
+
 		// Left or back arrows
 		if ((e.which === 37) ||  (e.which === 38)){
 			prevSlide();
          introChange();
+			console.log(currentSlideIndex);
 		}
 		// Down or right
 		if ((e.which === 39) ||  (e.which === 40)) {
 			nextSlide();
+			introChange();
 		}
 	});
 
@@ -158,8 +179,43 @@
       const diff = newslide - currentSlideIndex - 1;
       showSlide(diff); // show that slide
 
+		introChange();
+
       e.preventDefault();
 	});
+
+	//intro change function
+
+	const introChange = () => {
+
+		if(currentSlideIndex === 1) {
+
+			for (let i = 0;  i < intro.length; i++) {
+				intro[i].innerHTML = 'PROJ<br>ECT<br>001';
+			}
+		} else if (currentSlideIndex === 2){
+			for (let i = 0;  i < intro.length; i++) {
+				intro[i].innerHTML = 'PROJ<br>ECT<br>002';
+			}
+		} else if (currentSlideIndex === 3) {
+			for (let i = 0;  i < intro.length; i++) {
+				intro[i].innerHTML = 'PROJ<br>ECT<br>003';
+			}
+		} else if (currentSlideIndex == 4) {
+			for (let i = 0;  i < intro.length; i++) {
+				intro[i].innerHTML = 'PROJ<br>ECT<br>004';
+			}
+		} else if (currentSlideIndex === 5) {
+			for (let i = 0;  i < intro.length; i++) {
+				intro[i].innerHTML = 'PROJ<br>ECT<br>005';
+			}
+		} else {
+			for (let i = 0;  i < intro.length; i++) {
+				intro[i].innerHTML = 'INT<br>RO';
+			}
+		}
+
+	};// end introchange
 
 
    // mobile
@@ -184,6 +240,7 @@
       console.log(target);
 
    	previousTarget = slides.eq(currentSlideIndex-1)[0];
+		introChange();
    };
 
    const touchMove = (e) => {
@@ -204,11 +261,13 @@
 
          if (Math.abs(percentage) >= dragThreshold) {
             prevSlide();
+				introChange();
          }
       } else  {
          percentage++;
          if(percentage >= dragThreshold) {
             nextSlide();
+				introChange();
          }
    	}
 
@@ -222,9 +281,11 @@
 
    	if (percentage >= dragThreshold) {
    		nextSlide();
+			introChange();
    	}
    	else if ( Math.abs(percentage) >= dragThreshold ) {
    		prevSlide();
+			introChange();
    	} else {
    		// show current slide i.e. snap back
    		showSlide();
