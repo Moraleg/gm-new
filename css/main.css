@@ -645,19 +645,23 @@ nav.nav a:after {
       display: none; }
 
   #two .project-img-container {
-    background-image: url("../images/sw-img-t@2x.png"); }
+    background-image: url("../images/sw-img-t@2x.png");
+    background-position-x: 38%; }
 
   #three .project-img-container {
-    background-image: url("../images/paradisepizza-t@2x.png"); }
+    background-image: url("../images/paradisepizza-t@2x.png");
+    background-position-x: 50%; }
 
   #four .project-img-container {
-    background-image: url("../images/adventuretimes-t2@2x.png"); }
+    background-image: url("../images/adventuretimes-t2@2x.png");
+    background-position-x: 50%; }
 
   #five .project-img-container {
     background-image: url("../images/fitkids-t@2x.png"); }
 
   #six .project-img-container {
-    background-image: url("../images/c4-t@2x.png"); }
+    background-image: url("../images/c4-t@2x.png");
+    background-position: 50% 50%; }
 
   .bottom {
     width: 100%;
