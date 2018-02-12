@@ -126,12 +126,12 @@
    		- nav click event
    \*=========================================*/
 
-
 	// On Arrow Keys
 	$(document).keyup((e) => {
 		// Left or back arrows
 		if ((e.which === 37) ||  (e.which === 38)){
 			prevSlide();
+         introChange();
 		}
 		// Down or right
 		if ((e.which === 39) ||  (e.which === 40)) {
@@ -142,19 +142,18 @@
 	// On Nav Control - Nav Click event
 	$('.nav-slide').on('click', function(e) {
 
-         //Get current slide
-         currentSlideIndex = $(this).data('slide');
-         // console.log(currentSlideIndex);
+      //Get current slide
+      currentSlideIndex = $(this).data('slide');
+      console.log(currentSlideIndex);
 
-         // When link clicked, find slide it points to
-         const newslide = parseInt($(this).data('slide'));
-         // console.log(newslide);
+      // When link clicked, find slide it points to
+      const newslide = parseInt($(this).data('slide'));
 
-         // find how far it is from current slide
-         const diff = newslide - currentSlideIndex - 1;
-         showSlide(diff); // show that slide
+      // find how far it is from current slide
+      const diff = newslide - currentSlideIndex - 1;
+      showSlide(diff); // show that slide
 
-         e.preventDefault();
+      e.preventDefault();
 	});
 
 

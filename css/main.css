@@ -789,6 +789,9 @@ nav.nav a:after {
   .text-container .vertical-text {
     margin-top: -60px; }
 
+  .project-img-container {
+    height: 63.5vh; }
+
   .bottom .role-container {
     left: 275px; }
   .bottom .view-btn-container {

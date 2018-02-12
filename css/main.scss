@@ -1116,6 +1116,10 @@ nav.nav a:after {
       }
    }
 
+   .project-img-container {
+      height: 63.5vh;
+   }
+
    .bottom {
       .role-container {
          left: 275px;
@@ -1220,7 +1224,6 @@ nav.nav a:after {
    .project-img-container {
       background-image: url('../images/sw-img-d2.gif');
       background-size: cover;
-      // background-color: thistle;
       height: 63.5vh;
       margin-left: 10%;
       img.d-sw-img {
