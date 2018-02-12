@@ -545,7 +545,7 @@ nav.nav a:after {
     position: absolute;
     right: 35px;
     left: 14%;
-    bottom: 15vh;
+    bottom: 1vh;
     z-index: 1000;
     max-width: 415px;
     height: 0vh; }
