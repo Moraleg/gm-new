@@ -1,4 +1,15 @@
 @font-face {
+   font-family: 'Apercu-Regular';
+   src: url('../_fonts/Apercu-Regular.eot');
+   src: url('../_fonts/Apercu-Regular.otf');
+   src: url('../_fonts/Apercu-Regular.woff') format('woff'),
+   url('../_fonts/Apercu-Regular.ttf') format('truetype'),
+   url('../_fonts/Apercu-Regular.svg') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
    font-family: 'CircularStd-Bold';
    // src: url('../fonts/Apercu-Regular.eot');
    src: url('../fonts/CircularStd-Bold.otf');
@@ -41,8 +52,8 @@ $sm-desktop: 1200px;
 $desktop: 1440px;
 
 /* Fonts */
-$font-stackCB: 'CircularStd-Bold', 'Helvetica', sans-serif;
-$font-stackCM: 'CircularStd-Medium', 'Helvetica', sans-serif;
+$font-stackCB: 'Apercu-Regular', 'Helvetica', sans-serif;
+$font-stackCM: 'Apercu-Regular', 'Helvetica', sans-serif;
 $font-stackDB:'DinCondensed-Bold', 'Helvetica', sans-serif;
 
 /* Colors */
@@ -327,6 +338,7 @@ nav.nav a:after {
 .intro-container {
    text-transform: uppercase;
    font-family: $font-stackCB;
+   font-weight: bold; /*take this out later*/
    position: relative;
    z-index: 100;
 }
@@ -427,6 +439,7 @@ nav.nav a:after {
          max-width: 225px;
          text-decoration: none;
          font-family: $font-stackCB;
+         font-weight: bold; /*take this out later*/
          font-size: 14px;
          letter-spacing: 0.35px;
          line-height: 18px;
@@ -689,6 +702,7 @@ nav.nav a:after {
          li {
             list-style: none;
             font-family: $font-stackCB;
+            font-weight: bold; /*take this out later*/
             font-size: 10px;
             color: #292B2F;
             letter-spacing: 1.11px;
