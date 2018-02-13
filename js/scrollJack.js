@@ -14,12 +14,7 @@
    const slideNavSelector = $('.projects');
 	const navSlides = $('.nav-slide');
 	const numSlides = slides.length - 1; // total number of slides
-
-	const projects = $('#projects');
-	const sectionTwo = $('#two');
-	const sectionThree = $('#three');
 	const intro = $('.intro-container p') //change nav text per section
-
 
 
 
@@ -39,8 +34,6 @@
 
 			if ( Math.abs(delta) >= scrollThreshold) {
 				prevSlide();
-				// $('.role-container').fadeOut();
-				// $('.role-container').fadeIn();
 			}
 
 
@@ -50,16 +43,6 @@
 
 			if (delta >= scrollThreshold) {
 				nextSlide();
-				// $('.role-container').fadeIn();
-				//
-				//
-				// // //if the projects section height is less than 100% fade the role container out.
-				//
-				// if(currentSlideIndex === 2) {
-				// 	console.log(currentSlideIndex);
-				//    // console.log('im in section two');
-				// 	$('#two .role-container').fadeOut();
-				// }
 			}
 		}
 
@@ -105,8 +88,6 @@
 		return currentSlideIndex;
 
 	}
-
-
 
 
 	const prevSlide = () => {
@@ -190,27 +171,27 @@
 
 		if(currentSlideIndex === 1) {
 
-			for (let i = 0;  i < intro.length; i++) {
+			for (let i = 0; i < intro.length; i++) {
 				intro[i].innerHTML = 'PROJ<br>ECT<br>001';
 			}
 		} else if (currentSlideIndex === 2){
-			for (let i = 0;  i < intro.length; i++) {
+			for (let i = 0; i < intro.length; i++) {
 				intro[i].innerHTML = 'PROJ<br>ECT<br>002';
 			}
 		} else if (currentSlideIndex === 3) {
-			for (let i = 0;  i < intro.length; i++) {
+			for (let i = 0; i < intro.length; i++) {
 				intro[i].innerHTML = 'PROJ<br>ECT<br>003';
 			}
 		} else if (currentSlideIndex == 4) {
-			for (let i = 0;  i < intro.length; i++) {
+			for (let i = 0; i < intro.length; i++) {
 				intro[i].innerHTML = 'PROJ<br>ECT<br>004';
 			}
 		} else if (currentSlideIndex === 5) {
-			for (let i = 0;  i < intro.length; i++) {
+			for (let i = 0; i < intro.length; i++) {
 				intro[i].innerHTML = 'PROJ<br>ECT<br>005';
 			}
 		} else {
-			for (let i = 0;  i < intro.length; i++) {
+			for (let i = 0; i < intro.length; i++) {
 				intro[i].innerHTML = 'INT<br>RO';
 			}
 		}

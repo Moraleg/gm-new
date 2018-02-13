@@ -583,15 +583,15 @@ nav.nav a:after {
       line-height: 20px;
       text-transform: none; }
     .role-container .dev {
-      padding-right: 30px; }
+      padding-right: 28px; }
     .role-container .agency {
       padding-right: 49px; }
     .role-container .frlnce {
-      padding-right: 34px; }
+      padding-right: 28px; }
     .role-container .ga {
-      padding-right: 81px; }
+      padding-right: 80px; }
     .role-container .rgba {
-      padding-right: 60px; } }
+      padding-right: 57px; } }
 /************ TABLET *************/
 @media screen and (min-width: 460px) {
   /*------------MAIN SECTION (460px) --------------*/
@@ -808,15 +808,15 @@ nav.nav a:after {
       .bottom .role-container .role {
         padding-right: 82px; }
       .bottom .role-container .dev {
-        padding-right: 43px; }
+        padding-right: 42px; }
       .bottom .role-container .agency {
         padding-right: 65px; }
       .bottom .role-container .frlnce {
-        padding-right: 51px; }
+        padding-right: 44px; }
       .bottom .role-container .ga {
-        padding-right: 98px; }
+        padding-right: 97px; }
       .bottom .role-container .rgba {
-        padding-right: 76px; }
+        padding-right: 73px; }
 
   .mobile-btn {
     display: none; } }
@@ -1003,14 +1003,14 @@ nav.nav a:after {
   .bottom .role-container .role {
     padding-right: 140px; }
   .bottom .role-container .dev {
-    padding-right: 108px; }
+    padding-right: 105px; }
   .bottom .role-container .agency {
     padding-right: 120px; }
   .bottom .role-container .frlnce {
-    padding-right: 113px; }
+    padding-right: 108px; }
   .bottom .role-container .ga {
-    padding-right: 162px; }
+    padding-right: 164px; }
   .bottom .role-container .rgba {
-    padding-right: 140px; } }
+    padding-right: 139px; } }
 
 /*# sourceMappingURL=main.css.map */
