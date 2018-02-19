@@ -7,14 +7,14 @@ $(function(){
 	Variables
 	\*=========================================*/
 
-	let delta = 0; //distance scrolled/dragged in slide
-	let currentSlideIndex = 0; // the current slide
-	const  scrollThreshold = 45; // px to scroll before engaging
-	const dragThreshold = 0.15; // "percentage" to drag before engaging
-	const slides = $('.slide');
-	const navSlides = $('.nav-slide');
-	const numSlides = slides.length - 1; // total number of slides
-	const intro = $('.intro-container p'); //change nav text per section
+	var delta = 0; //distance scrolled/dragged in slide
+	var currentSlideIndex = 0; // the current slide
+	var  scrollThreshold = 45; // px to scroll before engaging
+	var dragThreshold = 0.15; // "percentage" to drag before engaging
+	var slides = $('.slide');
+	var navSlides = $('.nav-slide');
+	var numSlides = slides.length - 1; // total number of slides
+	var intro = $('.intro-container p'); //change nav text per section
 
 
 
@@ -23,7 +23,7 @@ $(function(){
 		mousewheel events
 	\*=========================================*/
 
-	const elementScroll = (e) => {
+	var elementScroll = function(e){
 
 		introChange();
 
@@ -62,7 +62,7 @@ $(function(){
 		-updateSlideNav
 	\*=========================================*/
 
-	const showSlide = () => {
+	var showSlide = function() {
 
 		// reset
 		delta = 0;
@@ -80,7 +80,7 @@ $(function(){
 	}
 
 
-	const prevSlide = () => {
+	var prevSlide = function() {
 
 		currentSlideIndex--;
 
@@ -94,7 +94,7 @@ $(function(){
 		return currentSlideIndex;
 	}
 
-	const nextSlide = () => {
+	var nextSlide = function() {
 
 		currentSlideIndex++;
 
@@ -108,7 +108,7 @@ $(function(){
 		return currentSlideIndex;
 	}
 
-	const updateSlideNav = function(currentSlideIndex) {
+	var updateSlideNav = function(currentSlideIndex) {
 		navSlides.removeClass('active');
 		navSlides.eq(currentSlideIndex).addClass('active');
 	};
@@ -121,7 +121,7 @@ $(function(){
 	\*=========================================*/
 
 	// On Arrow Keys
-	$(document).keyup((e) => {
+	$(document).keyup(function(e) {
 		// Left or back arrows
 		if ((e.which === 37) ||  (e.which === 38)){
 			prevSlide();
@@ -143,10 +143,10 @@ $(function(){
 		// console.log(currentSlideIndex);
 
 		// When link clicked, find slide it points to
-		const newslide = parseInt($(this).data('slide'));
+		var newslide = parseInt($(this).data('slide'));
 
 		// find how far it is from current slide
-		const diff = newslide - currentSlideIndex - 1;
+		var diff = newslide - currentSlideIndex - 1;
 		showSlide(diff); // show that slide
 
 		introChange();
@@ -156,7 +156,7 @@ $(function(){
 
 	//intro change function
 
-	const introChange = () => {
+	var introChange = function() {
 
 		if(currentSlideIndex === 1) {
 			for (i = 0; i < intro.length; i++) {
@@ -189,12 +189,12 @@ $(function(){
 
 	// mobile
 
-	let dragStart = null;	 // used to determine touch / drag distance
-	let percentage = 0;
-	let target,
+	var dragStart = null;	 // used to determine touch / drag distance
+	var percentage = 0;
+	var target,
 	previousTarget;
 
-	const touchStart = (e) => {
+	var touchStart = function(e) {
 
 		if (dragStart !== null) { return; }
 		if (e.originalEvent.touches) {
@@ -212,7 +212,7 @@ $(function(){
 		introChange();
 	};
 
-	const touchMove = (e) => {
+	var touchMove = function(e) {
 
 		if (dragStart === null) { return; }
 
@@ -243,7 +243,7 @@ $(function(){
 		return false;
 	};
 
-	const touchEnd = () => {
+	var touchEnd = function() {
 
 		dragStart = null;
 

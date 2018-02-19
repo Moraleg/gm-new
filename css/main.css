@@ -65,8 +65,7 @@ a {
   -ms-transform-origin: 50% 50%;
   -ms-animation-fill-mode: forwards;
   /*IE 10+*/
-  opacity: 0;
-  opacity: 1\9; }
+  opacity: 0; }
 
 @keyframes slide-up-fade-in {
   0% {
@@ -174,8 +173,7 @@ a {
   -ms-transform-origin: 50% 50%;
   -ms-animation-fill-mode: forwards;
   /*IE 10+*/
-  opacity: 0;
-  opacity: 1\9; }
+  opacity: 0; }
 
 @keyframes slide-right-fade-in {
   0% {
@@ -195,20 +193,19 @@ header {
 
 nav.nav {
   position: relative; }
-
-nav.nav a:after {
-  background: none repeat scroll 0 0 transparent;
-  bottom: -5px;
-  content: "";
-  display: block;
-  height: 4px;
-  position: absolute;
-  background: linear-gradient(-134deg, #A59FD9 0%, #E8CBCA 100%);
-  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0; }
+  nav.nav a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: -5px;
+    content: "";
+    display: block;
+    height: 4px;
+    position: absolute;
+    background: linear-gradient(-134deg, #A59FD9 0%, #E8CBCA 100%);
+    -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0; }
 
 #projects {
   height: 100%; }
@@ -376,11 +373,11 @@ nav.nav a:after {
 
   .about:hover:after {
     position: absolute;
-    width: 60%;
+    width: 58%;
     left: 0%; }
 
   .github:hover:after {
-    width: 55%;
+    width: 53%;
     left: 0%; }
 
   .contact:hover:after {
