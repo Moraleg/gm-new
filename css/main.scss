@@ -123,9 +123,7 @@ a {
    -ms-animation-iteration-count: 1;
    -ms-transform-origin: 50% 50%;
    -ms-animation-fill-mode:forwards; /*IE 10+*/
-
    opacity:0;
-   opacity: 1\9;
 }
 
 @keyframes slide-up-fade-in {
@@ -239,9 +237,7 @@ a {
    -ms-animation-iteration-count: 1;
    -ms-transform-origin: 50% 50%;
    -ms-animation-fill-mode:forwards; /*IE 10+*/
-
    opacity:0;
-   opacity: 1\9;
 }
 
 @keyframes slide-right-fade-in {
@@ -273,21 +269,21 @@ header {
 
 nav.nav {
    position: relative;
-}
 
-nav.nav a:after {
-   background: none repeat scroll 0 0 transparent;
-   bottom: -5px;
-   content: "";
-   display: block;
-   height: 4px;
-   position: absolute;
-   background: $btn-gradient;
-   -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-   -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-   -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-   transition: width 0.3s ease 0s, left 0.3s ease 0s;
-   width: 0;
+   a:after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: -5px;
+      content: "";
+      display: block;
+      height: 4px;
+      position: absolute;
+      background: $btn-gradient;
+      -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+   }
 }
 
 #projects {
@@ -529,7 +525,6 @@ nav.nav a:after {
    .text-container {
       position: relative;
 
-
       .vertical-text {
          width: 10%;
          margin: 0px -11% -10% 68%;
@@ -635,7 +630,6 @@ nav.nav a:after {
       img.m-sw-img {
          max-height: 450px;
       }
-
    }
 
    .project-headline {
@@ -1349,7 +1343,6 @@ nav.nav a:after {
       .project-img-container {
          background-image: url('../images/adventuretimes-d2@2x.png');
          background-size: cover;
-         // background-repeat: no-repeat;
       }
    }
    #five {
