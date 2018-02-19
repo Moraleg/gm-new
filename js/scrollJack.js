@@ -154,41 +154,31 @@ $(function(){
 		e.preventDefault();
 	});
 
-	//intro change function
 
+	//introchange function
 	var introChange = function() {
+		for( var i = 0; i < intro.length; i++) {
 
-		if(currentSlideIndex === 1) {
-			for (i = 0; i < intro.length; i++) {
+			if(currentSlideIndex === 1) {
 				intro[i].innerHTML = 'PROJ<br>ECT<br>001';
-			}
-		} else if (currentSlideIndex === 2){
-			for (i = 0; i < intro.length; i++) {
+			} else if (currentSlideIndex === 2) {
 				intro[i].innerHTML = 'PROJ<br>ECT<br>002';
-			}
-		} else if (currentSlideIndex === 3) {
-			for (i = 0; i < intro.length; i++) {
+			} else if (currentSlideIndex === 3) {
 				intro[i].innerHTML = 'PROJ<br>ECT<br>003';
-			}
-		} else if (currentSlideIndex == 4) {
-			for (i = 0; i < intro.length; i++) {
+			} else if (currentSlideIndex === 4) {
 				intro[i].innerHTML = 'PROJ<br>ECT<br>004';
-			}
-		} else if (currentSlideIndex === 5) {
-			for (i = 0; i < intro.length; i++) {
+			} else if (currentSlideIndex === 5) {
 				intro[i].innerHTML = 'PROJ<br>ECT<br>005';
-			}
-		} else {
-			for (i = 0; i < intro.length; i++) {
+			} else {
 				intro[i].innerHTML = 'INT<br>RO';
 			}
-		}
 
+		}
 	};// end introchange
 
 
-	// mobile
 
+	// mobile
 	var dragStart = null;	 // used to determine touch / drag distance
 	var percentage = 0;
 	var target,
