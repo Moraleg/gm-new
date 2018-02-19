@@ -159,29 +159,17 @@ $(function(){
 	var introChange = function() {
 
 		if(currentSlideIndex === 1) {
-			for (i = 0; i < intro.length; i++) {
-				intro[i].innerHTML = 'PROJ<br>ECT<br>001';
-			}
+			intro.innerHTML = 'PROJ<br>ECT<br>001';
 		} else if (currentSlideIndex === 2){
-			for (i = 0; i < intro.length; i++) {
-				intro[i].innerHTML = 'PROJ<br>ECT<br>002';
-			}
+			intro.innerHTML = 'PROJ<br>ECT<br>002';
 		} else if (currentSlideIndex === 3) {
-			for (i = 0; i < intro.length; i++) {
-				intro[i].innerHTML = 'PROJ<br>ECT<br>003';
-			}
+			intro.innerHTML = 'PROJ<br>ECT<br>003';
 		} else if (currentSlideIndex == 4) {
-			for (i = 0; i < intro.length; i++) {
-				intro[i].innerHTML = 'PROJ<br>ECT<br>004';
-			}
+			intro.innerHTML = 'PROJ<br>ECT<br>004';
 		} else if (currentSlideIndex === 5) {
-			for (i = 0; i < intro.length; i++) {
-				intro[i].innerHTML = 'PROJ<br>ECT<br>005';
-			}
+			intro.innerHTML = 'PROJ<br>ECT<br>005';
 		} else {
-			for (i = 0; i < intro.length; i++) {
-				intro[i].innerHTML = 'INT<br>RO';
-			}
+			intro.innerHTML = 'INT<br>RO';
 		}
 
 	};// end introchange
