@@ -159,17 +159,29 @@ $(function(){
 	var introChange = function() {
 
 		if(currentSlideIndex === 1) {
-			intro.innerHTML = 'PROJ<br>ECT<br>001';
+			for (i = 0; i < intro.length; i++) {
+				intro[i].innerHTML = 'PROJ<br>ECT<br>001';
+			}
 		} else if (currentSlideIndex === 2){
-			intro.innerHTML = 'PROJ<br>ECT<br>002';
+			for (i = 0; i < intro.length; i++) {
+				intro[i].innerHTML = 'PROJ<br>ECT<br>002';
+			}
 		} else if (currentSlideIndex === 3) {
-			intro.innerHTML = 'PROJ<br>ECT<br>003';
+			for (i = 0; i < intro.length; i++) {
+				intro[i].innerHTML = 'PROJ<br>ECT<br>003';
+			}
 		} else if (currentSlideIndex == 4) {
-			intro.innerHTML = 'PROJ<br>ECT<br>004';
+			for (i = 0; i < intro.length; i++) {
+				intro[i].innerHTML = 'PROJ<br>ECT<br>004';
+			}
 		} else if (currentSlideIndex === 5) {
-			intro.innerHTML = 'PROJ<br>ECT<br>005';
+			for (i = 0; i < intro.length; i++) {
+				intro[i].innerHTML = 'PROJ<br>ECT<br>005';
+			}
 		} else {
-			intro.innerHTML = 'INT<br>RO';
+			for (i = 0; i < intro.length; i++) {
+				intro[i].innerHTML = 'INT<br>RO';
+			}
 		}
 
 	};// end introchange
