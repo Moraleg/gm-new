@@ -16,7 +16,7 @@
 /* Fonts */
 /* Colors */
 header {
-  position: fixed;
+  position: absolute;
   z-index: 1000; }
 
 nav.nav {

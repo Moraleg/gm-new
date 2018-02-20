@@ -16,7 +16,7 @@
 /* Fonts */
 /* Colors */
 header {
-  position: fixed;
+  position: absolute;
   z-index: 1000; }
 
 nav.nav {
@@ -126,6 +126,9 @@ nav.nav {
       margin: 60px 0 0 60px; }
     header nav.nav {
       margin: 60px 60px 0 0; } }
+/****************************
+   BASE ELEMENTS
+****************************/
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -138,10 +141,13 @@ html, body {
 body {
   background: #fff; }
 
-h1 {
+h1, p {
   margin: 0;
   padding: 0; }
 
+/****************************
+   BASE STYLES
+****************************/
 .full-width {
   background: #EBE2E2;
   content: "";
@@ -180,6 +186,21 @@ h1 {
     display: inline-block;
     font-family: "Apercu-Regular", "Helvetica", sans-serif;
     font-weight: bold; }
+  .section-about .main-panel .vertical {
+    float: right;
+    transform-origin: left top 0;
+    transform: rotate(270deg);
+    position: fixed; }
+  .section-about .main-panel .vertical::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 92px;
+    top: 8px;
+    height: 2px;
+    background: #000;
+    width: 105px;
+    vertical-align: middle; }
   .section-about .main-panel .name-container {
     position: absolute;
     right: 0;
@@ -187,6 +208,10 @@ h1 {
     .section-about .main-panel .name-container h1 {
       text-align: center;
       font-family: "DINCondensed-Bold", "Helvetica", sans-serif; }
+
+.section-text .p-text {
+  font-family: "Apercu-Regular", "Helvetica", sans-serif;
+  text-align: left; }
 
 /****************************
    MEDIA QUERIES
@@ -215,6 +240,8 @@ h1 {
       font-size: 12px;
       line-height: 18px;
       letter-spacing: 1.33px; }
+    .section-about .main-panel .vertical {
+      display: none; }
     .section-about .main-panel .name-container {
       bottom: -10px; }
       .section-about .main-panel .name-container h1 {
@@ -222,7 +249,17 @@ h1 {
         line-height: 30px;
         letter-spacing: 1.5px; }
     .section-about .main-panel .blurb {
-      display: none; } }
+      display: none; }
+
+  .section-text .p-text {
+    font-size: 12px;
+    letter-spacing: 0.15px;
+    line-height: 30px;
+    width: 90%;
+    max-width: 100%;
+    margin: 10px auto 0; }
+  .section-text .p-text:first-child {
+    margin-top: 40px; } }
 @media screen and (min-width: 460px) {
   #circle {
     width: 255px;
@@ -235,7 +272,10 @@ h1 {
   .section-about .main-panel .name-container {
     bottom: -20px; }
     .section-about .main-panel .name-container h1 {
-      padding-top: 20px; } }
+      padding-top: 20px; }
+
+  .section-text .p-text {
+    width: 80%; } }
 @media screen and (min-width: 650px) {
   .full-width {
     height: 348px; }
@@ -249,7 +289,10 @@ h1 {
     background-size: 420px 420px;
     padding: 192px; }
   .section-about .main-panel .bio {
-    bottom: 168px; } }
+    bottom: 168px; }
+
+  .section-text .p-text:first-child {
+    margin-top: 55px; } }
 @media screen and (min-width: 768px) {
   .full-width {
     height: 308px; }
@@ -266,6 +309,10 @@ h1 {
       transform: none;
       top: 16px;
       left: 18.5%; }
+    .section-about .main-panel .vertical {
+      display: block;
+      bottom: 96px;
+      left: 30.5px; }
     .section-about .main-panel .name-container {
       width: 150px;
       top: 50px;
@@ -276,7 +323,17 @@ h1 {
         text-align: left;
         font-size: 35px;
         line-height: 40px;
-        letter-spacing: 1.75px; } }
+        letter-spacing: 1.75px; }
+
+  .section-text .p-text:first-child {
+    margin-top: 0; }
+  .section-text .p-text {
+    width: 58%;
+    max-width: 100%;
+    margin: 20px auto 0;
+    font-size: 16px;
+    letter-spacing: 0.23px;
+    line-height: 30px; } }
 @media screen and (min-width: 1200px) {
   .full-width {
     height: 512px; }
@@ -296,6 +353,9 @@ h1 {
   .section-about .main-panel .bio {
     top: 50px;
     left: -6%; }
+  .section-about .main-panel .vertical {
+    bottom: -7px;
+    left: 55px; }
   .section-about .main-panel .name-container {
     top: 90px;
     left: -6%; }
@@ -312,7 +372,11 @@ h1 {
       font-family: "Apercu-Regular", "Helvetica", sans-serif;
       font-size: 14px;
       line-height: 20px;
-      letter-spacing: 0.2px; } }
+      letter-spacing: 0.2px; }
+
+  .section-text .p-text {
+    width: 600px;
+    padding-left: 35px; } }
 @media screen and (min-width: 1440px) {
   .section-about .main-panel .blurb {
     right: -40%; } }
