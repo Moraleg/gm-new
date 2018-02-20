@@ -111,6 +111,29 @@ h1, p {
       font-family: $font-stackCM;
       text-align: left;
    }
+
+   .p-text a {
+      color: transparent;
+      text-shadow: 0 0 #333, 0.08em 0 0 #fff, 0 0, -0.08em 0 0 #fff;
+      display: inline-block;
+      overflow: hidden;
+      position: relative;
+      text-decoration: none;
+      vertical-align: bottom;
+   }
+
+   .p-text a::after {
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 2px;
+      width: 400%;
+      will-change: tranform;
+      z-index: -1;
+
+   }
+
 }
 
 
@@ -177,13 +200,17 @@ h1, p {
          font-size: 12px;
          letter-spacing: 0.15px;
          line-height: 30px;
-         width: 90%;
+         width: 80%;
          max-width: 100%;
          margin: 10px auto 0;
       }
 
       .p-text:first-child {
          margin-top: 40px;
+      }
+
+      .p-text a::after {
+         background: linear-gradient(-134deg, #A59FD9 60%, #E8CBCA 100%) center 1.5em/100% 2px no-repeat;
       }
    }
 }
@@ -310,6 +337,26 @@ h1, p {
          font-size: 16px;
          letter-spacing: 0.23px;
          line-height: 30px;
+      }
+
+      .p-text a::after {
+         background: linear-gradient(to bottom,#000,#000)center 1.25em/100% 2px no-repeat;
+      }
+
+      .p-text a:hover:after {
+         -webkit-animation: underline-gradient 6s linear infinite;
+         -moz-animation: underline-gradient 6s linear infinite;
+         animation: underline-gradient 6s linear infinite;
+         background-image: linear-gradient(90deg,#A59FD9 15%,#E8CBCA 35%,rgba(122,95,255,.8) 85%);
+      }
+
+      @keyframes underline-gradient {
+        0%{
+          transform: translate3d(0%, 0%, 0);
+        }
+        100%{
+          transform: translate3d(-75%, 0%, 0);
+        }
       }
    }
 }
