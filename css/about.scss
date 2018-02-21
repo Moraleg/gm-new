@@ -4,6 +4,7 @@
    BASE ELEMENTS
 ****************************/
 
+
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -137,6 +138,9 @@ h1, p {
 }
 
 
+hr {
+   border: 1px solid #eee;
+}
 
 
 /****************************
@@ -212,6 +216,11 @@ h1, p {
       .p-text a::after {
          background: linear-gradient(-134deg, #A59FD9 60%, #E8CBCA 100%) center 1.5em/100% 2px no-repeat;
       }
+   }
+
+   hr {
+      margin-top: 8%;
+      width: 70%;
    }
 }
 
@@ -358,6 +367,11 @@ h1, p {
           transform: translate3d(-75%, 0%, 0);
         }
       }
+   }
+
+   hr {
+      margin-top: 10%;
+      width: 50%;
    }
 }
 
