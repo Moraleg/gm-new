@@ -407,7 +407,7 @@ body {
   box-sizing: border-box;
   background: linear-gradient(-225deg, rgba(166, 189, 242, 0.15) 0%, rgba(211, 187, 216, 0.15) 42%, rgba(157, 169, 232, 0.15) 76%, rgba(249, 192, 176, 0.15) 100%) no-repeat fixed; }
 
-p {
+p, h4, h5 {
   margin: 0 auto;
   text-align: center; }
 
