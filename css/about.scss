@@ -20,7 +20,7 @@ body {
    background: #fff;
 }
 
-h1, p {
+h1, h4, h5, p {
    margin: 0;
    padding: 0;
 }
@@ -142,6 +142,45 @@ hr {
    border: 1px solid #eee;
 }
 
+.section-tech {
+   margin: 0 auto;
+   display: block;
+
+   h4 {
+      font-family: $font-stackCM;
+      font-weight: bold;
+      color: #9A6D79;
+      font-size: 14px;
+      letter-spacing: 1.56px;
+      line-height: 18px;
+      text-align: left;
+      margin-bottom: 15px;
+   }
+
+   .tech {
+      margin: 0 auto;
+      display: block;
+
+      h5 {
+         font-family: $font-stackCM;
+         font-weight: bold;
+         font-size: 12px;
+         letter-spacing: 1.33px;
+         line-height: 18px;
+         margin-top: 25px;
+         margin-bottom: 15px;
+      }
+
+      p {
+         font-family: $font-stackCM;
+         font-weight: medium;
+         font-size: 16px;
+         letter-spacing: 0.23px;
+         line-height: 30px;
+      }
+   }
+}
+
 
 /****************************
    MEDIA QUERIES
@@ -219,8 +258,16 @@ hr {
    }
 
    hr {
-      margin-top: 8%;
+      margin: 35px auto;
       width: 70%;
+   }
+
+   .section-tech {
+      width: 80%;
+      max-width: 100%;
+      .md {
+         margin-bottom: 30px;
+      }
    }
 }
 
@@ -370,8 +417,12 @@ hr {
    }
 
    hr {
-      margin-top: 10%;
+      margin: 62px auto;
       width: 50%;
+   }
+
+   .section-tech {
+      width: 58%;
    }
 }
 
@@ -439,6 +490,15 @@ hr {
          padding-left: 35px;
          // width: 34%;
       }
+   }
+
+   .section-tech {
+      width: 600px;
+      padding-left: 35px;
+      .md {
+         margin-bottom: 60px;
+      }
+
    }
 }
 
