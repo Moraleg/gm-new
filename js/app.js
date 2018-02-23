@@ -1,10 +1,6 @@
-// Image Slide Down
-$(document).ready(() => {
-   $('.slideDown').slideDown(500, "swing");
-});
-
-
 jQuery(document).ready(function($) {
+   $('.slideDown').slideDown(500, "swing");
+
   var alterClass = function() {
     var ww = document.body.clientWidth;
     if (ww < 768) {
