@@ -1,4 +1,4 @@
-jQuery(document).ready(function($) {
+$(document).ready(function() {
    $('.slideDown').slideDown(500, "swing");
 
   var alterClass = function() {

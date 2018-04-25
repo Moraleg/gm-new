@@ -453,6 +453,7 @@ h1, h4, h5, p {
     font-family: "Apercu-Regular", "Helvetica", sans-serif;
     font-weight: bold; }
   .section-about .main-panel .vertical {
+    font-family: "Apercu-Regular", "Helvetica", sans-serif;
     float: right;
     transform-origin: left top 0;
     transform: rotate(270deg);
