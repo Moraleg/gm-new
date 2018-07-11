@@ -49,9 +49,6 @@ $(function(){
 		return false;
 	}
 
-	// On Mouse Scroll
-	$(window).on({'DOMMouseScroll mousewheel': elementScroll});
-
 	/*=========================================*\
 		Slide control functions
 
@@ -107,6 +104,9 @@ $(function(){
 		//return the current slide
 		return currentSlideIndex;
 	}
+
+	// On Mouse Scroll
+	$(window).on({'DOMMouseScroll mousewheel': elementScroll});
 
 	var updateSlideNav = function(currentSlideIndex) {
 		navSlides.removeClass('active');
@@ -184,11 +184,11 @@ $(function(){
 	var target,
 	previousTarget;
 
-	var touchStart = function(e) {
+	var touchStart = function(event) {
 
 		if (dragStart !== null) { return; }
-		if (e.originalEvent.touches) {
-			event = e.originalEvent.touches[0];
+		if (event.originalEvent.touches) {
+			event = event.originalEvent.touches[0];
 		}
 
 		// where in the viewport was touched
@@ -202,33 +202,44 @@ $(function(){
 		introChange();
 	};
 
-	var touchMove = function(e) {
+	var touchMove = function(event) {
 
 		if (dragStart === null) { return; }
 
-		if (e.originalEvent.touches) {
-			event = e.originalEvent.touches[0];
+		if (event.originalEvent.touches) {
+			event = event.originalEvent.touches[0];
 		}
 
 		delta = dragStart - event.clientY;
-
 		percentage = delta;
-
-		if (e.orgiginalEvent.detail < 0 || e.originalEvent.touches > 0) {
-
-			percentage--;
-
-			if (Math.abs(percentage) >= dragThreshold) {
-				prevSlide();
-				introChange();
+		console.log('percentage: ', percentage);
+		
+		// Going down/next. Animate the height of the target element.
+		if (percentage > 0) {
+			target.style.height = (100 - (percentage*100)) + '%';
+			if(previousTarget) {
+				previousTarget.style.height = ''; //reset
 			}
-		} else  {
-			percentage++;
-			if(percentage >= dragThreshold) {
-				nextSlide();
-				introChange();
-			}
+		} else if (previousTarget) { // Going up/prev. Animate the height of the _previous_ element.
+			previousTarget.style.height = (- percentage*100) + '%';
+			target.style.height = ''; //reset
 		}
+
+		// if (event.originalEvent.detail < 0 || event.originalEvent.touches > 0) {
+
+		// 	percentage--;
+
+		// 	if (Math.abs(percentage) >= dragThreshold) {
+		// 		prevSlide();
+		// 		introChange();
+		// 	}
+		// } else  {
+		// 	percentage++;
+		// 	if(percentage >= dragThreshold) {
+		// 		nextSlide();
+		// 		introChange();
+		// 	}
+		// }
 		// Don't drag element. This is important.
 		return false;
 	};
